@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWC Striped Transition Test</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            overflow-x: hidden;
+            background: #121212;
+            line-height: 1;
+        }
+
+        .test-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+        }
+
+        #section1 {
+            background-color: #0A0A0A;
+            z-index: 2;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        #section2 {
+            background-color: #121212;
+            z-index: 1;
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        .content {
+            text-align: center;
+            max-width: 800px;
+            padding: 40px;
+            width: 100%;
+        }
+
+        #section1 .content {
+            color: #ffffff;
+        }
+
+        #section2 .content {
+            color: #e0e0e0;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            opacity: 0.8;
+        }
+
+        /* PWC Transition Container */
+        #pwc-transition-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            background: #0A0A0A;
+            margin: 0;
+            padding: 0;
+            transform: translateZ(0);
+            will-change: height;
+            min-height: 0;
+        }
+
+        .pwc-transition-bar {
+            width: 100%;
+            position: relative;
+            transition: none;
+            margin: 0;
+            padding: 0;
+            display: block;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+            border: none;
+            outline: none;
+        }
+
+        /* Debugging styles */
+        .debug-info {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 12px;
+            z-index: 1000;
+            max-width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="debug-info" id="debug-info">
+        <div>Scroll Y: <span id="scroll-y">0</span></div>
+        <div>Target Height: <span id="target-height">750</span></div>
+        <div>Current Height: <span id="current-height">750</span></div>
+        <div>Bars Count: <span id="bars-count">0</span></div>
+        <div>System Status: <span id="system-status">Loading...</span></div>
+    </div>
+
+    <section id="section1" class="test-section">
+        <div class="content">
+            <h1>"That ends here"</h1>
+            <p>This simulates the dark section where the narrative ends. The striped transition should appear below as you scroll.</p>
+        </div>
+    </section>
+
+    <div id="pwc-transition-container">
+        <!-- Gradient transition bars will be dynamically created here -->
+    </div>
+
+    <section id="section2" class="test-section">
+        <div class="content">
+            <h1>PWC Takes Control</h1>
+            <p>This section matches the hero section background. The transition above should smoothly blend from dark to this color.</p>
+        </div>
+    </section>
+
+    <script src="js/stripedTransition.js"></script>
+    
+    <script>
+        // Debug display
+        function updateDebugInfo() {
+            const scrollY = window.pageYOffset || window.scrollY;
+            const transition = window.pwcStripedTransition;
+            
+            document.getElementById('scroll-y').textContent = Math.round(scrollY);
+            
+            if (transition && transition.state) {
+                document.getElementById('target-height').textContent = Math.round(transition.state.targetTotalHeight);
+                document.getElementById('current-height').textContent = Math.round(transition.state.currentTargetHeight);
+                document.getElementById('bars-count').textContent = transition.state.bars.length;
+                document.getElementById('system-status').textContent = 'Active';
+            } else {
+                document.getElementById('system-status').textContent = 'Not initialized';
+            }
+        }
+        
+        // Update debug info regularly
+        setInterval(updateDebugInfo, 100);
+        
+        // Initial debug update
+        setTimeout(updateDebugInfo, 500);
+    </script>
+</body>
+</html> 

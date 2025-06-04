@@ -1,0 +1,36 @@
+{
+  "name": "pwc-landing-page",
+  "version": "1.0.0",
+  "description": "PWC Agency Landing Page - Modular Architecture",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "python -m http.server 8001",
+    "lint": "npx eslint js/**/*.js",
+    "format": "npx prettier --write js/**/*.js src/**/*.html *.html",
+    "test": "node -e \"console.log('Testing page boot...'); require('./test-boot.js')\""
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "prettier": "^3.2.5"
+  },
+  "eslintConfig": {
+    "extends": ["airbnb-base"],
+    "env": {
+      "browser": true,
+      "es2022": true
+    },
+    "rules": {
+      "no-console": "off",
+      "no-use-before-define": ["error", { "functions": false }],
+      "no-unused-vars": "error"
+    }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": true
+  }
+} 

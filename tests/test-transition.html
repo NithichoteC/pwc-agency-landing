@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition Test</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #121212;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        
+        .section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .failed-attempts-section {
+            background-color: #0A0A0A;
+            z-index: 2;
+        }
+        
+        .next-section {
+            background-color: #333333;
+            z-index: 1;
+        }
+        
+        #transition-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            background: #0A0A0A;
+            margin: 0;
+            padding: 0;
+            transform: translateZ(0);
+            will-change: height;
+            min-height: 0;
+        }
+        
+        .bar {
+            width: 100%;
+            position: relative;
+            transition: none;
+            margin: 0;
+            padding: 0;
+            display: block;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+            border: none;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        console.log('🔥 TEST PAGE LOADING');
+        alert('JavaScript is working!');
+    </script>
+    
+    <section class="section failed-attempts-section">
+        <div>
+            <h1>Section 1 - Dark Background</h1>
+            <p>This is the first section with dark background</p>
+        </div>
+    </section>
+
+    <div id="transition-container"></div>
+
+    <section class="section next-section">
+        <div>
+            <h1>Section 2 - Gray Background</h1>
+            <p>This is the second section with gray background</p>
+        </div>
+    </section>
+
+    <script>
+        console.log('🚀 TRANSITION SCRIPT LOADING...');
+        
+        // --- Configuration ---
+        const NUMBER_OF_BARS = 7;
+        const INITIAL_TOTAL_HEIGHT = 750;
+        const EASING_FACTOR = 0.12;
+        const INITIAL_BAR_HEIGHT = (NUMBER_OF_BARS > 0) ? INITIAL_TOTAL_HEIGHT / NUMBER_OF_BARS : 0;
+
+        // --- DOM Element Cache ---
+        const elements = {
+            container: null,
+            section1: null,
+        };
+
+        // --- State Management ---
+        const state = {
+            bars: [],
+            rafId: null,
+            currentTargetHeight: INITIAL_TOTAL_HEIGHT,
+            targetTotalHeight: INITIAL_TOTAL_HEIGHT,
+        };
+
+        function interpolateColor(color1, color2, factor) {
+            factor = Math.max(0, Math.min(1, factor));
+            const c1 = parseInt(color1.slice(1), 16);
+            const c2 = parseInt(color2.slice(1), 16);
+            const r1 = (c1 >> 16) & 0xff; const g1 = (c1 >> 8) & 0xff; const b1 = c1 & 0xff;
+            const r2 = (c2 >> 16) & 0xff; const g2 = (c2 >> 8) & 0xff; const b2 = c2 & 0xff;
+            const r = Math.round(r1 + (r2 - r1) * factor);
+            const g = Math.round(g1 + (g2 - g1) * factor);
+            const b = Math.round(b1 + (b2 - b1) * factor);
+            return `#${((r << 16) | (g << 8) | b).toString(16).padStart(6, '0')}`;
+        }
+
+        function createBars() {
+            console.log('🔄 Creating transition bars...');
+            const fragment = document.createDocumentFragment();
+            for (let i = 0; i < NUMBER_OF_BARS; i++) {
+                const bar = document.createElement('div');
+                bar.className = 'bar';
+                const factor = (NUMBER_OF_BARS > 1) ? (i / (NUMBER_OF_BARS - 1)) : 0;
+                bar.style.backgroundColor = interpolateColor('#0A0A0A', '#333333', factor);
+                bar.style.height = `${INITIAL_BAR_HEIGHT}px`;
+                fragment.appendChild(bar);
+                state.bars.push(bar);
+            }
+            elements.container.appendChild(fragment);
+            elements.container.style.height = `${state.currentTargetHeight}px`;
+        }
+
+        function calculateAndUpdateTargetHeight() {
+            const scrollY = window.pageYOffset || window.scrollY;
+            const section1GonePoint = elements.section1.offsetTop + elements.section1.offsetHeight;
+            const collapseEnd = section1GonePoint;
+            const collapseStart = collapseEnd - INITIAL_TOTAL_HEIGHT;
+
+            let newTargetHeight;
+            if (scrollY <= collapseStart) {
+                newTargetHeight = INITIAL_TOTAL_HEIGHT;
+            } else if (scrollY >= collapseEnd) {
+                newTargetHeight = 0;
+            } else {
+                if (INITIAL_TOTAL_HEIGHT <= 0) {
+                    newTargetHeight = 0;
+                } else {
+                    const progress = (scrollY - collapseStart) / INITIAL_TOTAL_HEIGHT;
+                    newTargetHeight = Math.max(0, INITIAL_TOTAL_HEIGHT * (1 - progress));
+                }
+            }
+            state.targetTotalHeight = newTargetHeight;
+        }
+
+        function animationLoop() {
+            const diff = state.targetTotalHeight - state.currentTargetHeight;
+            if (Math.abs(diff) < 0.1) {
+                state.currentTargetHeight = state.targetTotalHeight;
+            } else {
+                state.currentTargetHeight += diff * EASING_FACTOR;
+            }
+
+            const displayTotalHeight = Math.round(state.currentTargetHeight);
+            const displayBarHeight = (NUMBER_OF_BARS > 0 && displayTotalHeight > 0) ? (displayTotalHeight / NUMBER_OF_BARS) : 0;
+
+            if (displayTotalHeight <= 0) {
+                elements.container.style.height = '0px';
+                elements.container.style.minHeight = '0px';
+                elements.container.style.maxHeight = '0px';
+                state.bars.forEach(bar => {
+                    bar.style.height = '0px';
+                    bar.style.minHeight = '0px';
+                    bar.style.maxHeight = '0px';
+                    bar.style.display = 'none';
+                });
+            } else {
+                elements.container.style.height = `${displayTotalHeight}px`;
+                elements.container.style.minHeight = '';
+                elements.container.style.maxHeight = '';
+                state.bars.forEach(bar => {
+                    bar.style.height = `${displayBarHeight.toFixed(2)}px`;
+                    bar.style.minHeight = '';
+                    bar.style.maxHeight = '';
+                    bar.style.display = 'block';
+                });
+            }
+            state.rafId = requestAnimationFrame(animationLoop);
+        }
+
+        function initTransition() {
+            console.log('🔍 Initializing transition...');
+            elements.container = document.getElementById('transition-container');
+            elements.section1 = document.querySelector('.failed-attempts-section');
+            
+            console.log('🔍 Container:', elements.container);
+            console.log('🔍 Section1:', elements.section1);
+            
+            if (!elements.container || !elements.section1) {
+                console.error('❌ Required elements not found');
+                return;
+            }
+
+            console.log('✅ Starting transition system...');
+            createBars();
+
+            requestAnimationFrame(() => {
+                calculateAndUpdateTargetHeight();
+                state.currentTargetHeight = state.targetTotalHeight;
+                animationLoop();
+            });
+
+            window.addEventListener('scroll', calculateAndUpdateTargetHeight, { passive: true });
+            window.addEventListener('resize', calculateAndUpdateTargetHeight);
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initTransition);
+        } else {
+            initTransition();
+        }
+    </script>
+</body>
+</html> 

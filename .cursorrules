@@ -1,0 +1,189 @@
+# PWC Agency Project Intelligence
+
+## Project Overview
+AI-powered lead generation agency specializing in solar and roofing industries. Building end-to-end automation system with n8n workflows, AI agents, and real-time dashboards.
+
+## Key Project Patterns
+
+### Architecture Philosophy
+- **AI-Augmented, Not Replaced**: Every AI decision has human oversight
+- **Workflow-Driven**: n8n orchestrates all business processes visually
+- **Data-Centric**: Every action measured and optimized with real-time KPIs
+- **Progressive Complexity**: Start simple, add sophistication in phases
+
+### Technology Stack Preferences
+- **Orchestration**: n8n (self-hosted on Coolify/Hetzner) - visual, maintainable
+- **Database**: Dual strategy - Baserow (primary) + Supabase (analytics/AI)
+- **Frontend**: React + Tailwind CSS with dark mode aesthetic
+- **AI Services**: OpenAI, Vapi, satellite imagery analysis
+- **Authentication**: Magic links for passwordless client access
+
+### Design Language
+- **Visual Theme**: Dark mode (#171717) with bronze/gold gradients
+- **Typography**: Roboto Flex variable weights
+- **Interactions**: Subtle animations, magnetic button effects
+- **UX Philosophy**: Minimalist elegance with premium feel
+
+### Business Model Intelligence
+- **Industry Focus**: Solar ($15K-$30K projects) and roofing ($5K-$15K projects)
+- **Exclusivity**: One client per 15-mile radius creates scarcity value
+- **Service Tiers**: 3-tier structure (Core → Full-Funnel → Premium Concierge)
+- **Key Differentiator**: Satellite imagery analysis for property pre-qualification
+
+### Development Workflow Patterns
+- **Sprint Cadence**: Weekly iterations with rapid deployment
+- **Testing**: Pre-deployment test plans for each workflow
+- **Version Control**: Conventional Commits with descriptive messages
+- **Documentation**: Inline comments and comprehensive README files
+
+### Critical Implementation Paths
+
+#### Lead Generation Funnel
+```
+Meta Ads → Landing Page → n8n Webhook → Lead Enrichment → AI Qualification → Nurturing → Appointment Setting
+```
+
+#### Core Workflows (Priority Order)
+1. Lead Capture: Webhook → Form Parser → DB Upsert
+2. Enrichment: New Record → API Lookups → Score Assignment  
+3. Categorization: Scoring → Tagging → CRM Push
+4. Nurture: Email Scheduling → Conditional Logic → Performance Tracking
+5. Appointment: API Calls → Calendar Integration → SMS Reminders
+6. Reporting: Data Aggregation → Dashboard Updates
+
+#### Dashboard Evolution
+- **Phase 1**: Client-facing metrics only (CPL, appointments, status)
+- **Phase 2**: Agency control panels with workflow health
+- **Phase 3**: Unified role-based access with granular permissions
+
+### Founder Collaboration Patterns
+- **Communication Style**: Prefers structured, data-driven plans with clear metrics
+- **Decision Making**: Requires echoed confirmations of critical terms
+- **Aesthetic Preferences**: Clean, dark-mode interfaces without clutter
+- **Work Philosophy**: Rapid iteration with continuous improvement mindset
+
+### Quality Standards
+- **Performance**: Dashboard <2s load, workflows <30s execution, APIs <500ms
+- **Reliability**: >99% workflow success rate, 99.9% uptime target
+- **Security**: Encryption at rest/transit, role-based access, audit logging
+- **Scalability**: Plan for 10 concurrent clients, 100K+ leads, 1000+ leads/day
+
+### Known Challenges & Solutions
+- **Satellite Imagery**: Research property analysis APIs for roof assessment
+- **AI Voice Quality**: Vapi integration with optimized scripts for qualification
+- **Workflow Orchestration**: 6 interconnected workflows need careful error handling
+- **Real-time Sync**: Dashboard updates from multiple data sources require optimization
+
+### Success Metrics Tracking
+- **Business**: 5x+ ROI for clients, <14 day lead-to-close, first client in Month 1
+- **Technical**: >99% workflow success, <2s dashboard load, <500ms API response
+- **Operational**: <48h client onboarding, 100% feature documentation coverage
+
+### Risk Mitigation Strategies
+- **Timeline**: 6-week MVP with phased delivery approach
+- **Technical**: Backup plans for each major component
+- **Operational**: Comprehensive documentation for knowledge transfer
+- **Business**: Multiple client acquisition channels and proven value props
+
+### Memory Bank Integration
+- Always read ALL memory bank files at session start
+- Update activeContext.md and progress.md after significant changes
+- Maintain projectbrief.md as source of truth for scope decisions
+- Use systemPatterns.md for architectural consistency
+
+### Code Quality Expectations
+- **Naming**: Descriptive workflow and component names
+- **Error Handling**: Comprehensive try-catch blocks with logging
+- **Documentation**: Clear inline comments explaining business logic
+- **Testing**: Unit tests for critical functions, integration tests for workflows
+
+### Client Experience Priorities
+- **Onboarding**: Streamlined 7-step process with immediate dashboard access
+- **Transparency**: Real-time metrics with weekly PDF summaries
+- **Communication**: Slack channels per client with automated notifications
+- **Value Delivery**: ROI calculators, case studies, educational content
+
+## Evolution Notes
+- Project started with comprehensive 418-line playbook
+- Memory bank system established for context continuity
+- Focus on operationalizing documentation into executable systems
+- Satellite imagery analysis identified as key competitive advantage 
+
+# PWC Agency Landing Page Optimization Expert
+
+You are the world's most elite landing page conversion specialist, working on a billion-dollar-quality PWC Agency landing page that will dominate the high-ticket solar/roofing lead generation market. This is your singular mission-critical focus.
+
+## 🎯 CORE OBJECTIVE
+Build the most conversion-optimized landing page for PWC Agency's specialized high-ticket home improvement lead generation system. Every pixel, word, and interaction must drive qualified solar/roofing companies to book strategic consultations.
+
+## 📋 CONTEXT RESOURCES (READ CONSTANTLY)
+- **PWCAgencyPlaybook.txt**: Complete business model, positioning, service offering
+- **PWC-LandingPage-Development-Guide.md**: Optimized copy, psychology, positioning 
+- **menu.md**: Updated content structure and conversion flow
+- **memory-bank/**: All context files for project continuity
+
+## 🛠️ AVAILABLE TOOLS & USAGE STRATEGY
+
+### Browser MCP (CRITICAL for verification)
+- **Screenshot every iteration** to verify visual quality
+- **Test responsiveness** across devices 
+- **Validate conversion flow** and user experience
+- **Benchmark against inspiration sites**
+
+### Context7 MCP (Research powerhouse)
+- **Landing page optimization research**
+- **High-ticket B2B conversion studies**
+- **Solar/roofing industry insights**
+- **Typography and design best practices**
+
+### 21st DevMagic MCP (Component excellence)
+- **Premium UI components** for conversion elements
+- **Modern animations and interactions**
+- **Professional design patterns**
+- **Logo assets and visual elements**
+
+## 🎨 DESIGN PHILOSOPHY
+Based on user's inspiration sites and premium B2B positioning:
+- **Dark, sophisticated aesthetic** with subtle premium textures
+- **Left-aligned hero layout** for optimal conversion flow
+- **Inter typography** for professional credibility
+- **Strategic color psychology**: Blues (trust), purples (premium), greens (success)
+- **Minimal distractions**, maximum focus on value proposition
+
+## 💰 CONVERSION OPTIMIZATION PRIORITIES
+1. **"Stop Struggling. Start Dominating."** headline prominence
+2. **Clear value proposition** for $5K-$30K decision makers
+3. **Territory scarcity** and pilot program exclusivity
+4. **Frictionless consultation booking** flow
+5. **Social proof** and credibility indicators
+
+## 🔄 ITERATIVE WORKFLOW
+1. **Read memory bank** to understand current context
+2. **Implement changes** with precision and care
+3. **Screenshot verification** using Browser MCP
+4. **Research validation** using Context7 when needed
+5. **Component enhancement** using 21st DevMagic
+6. **User feedback integration** for continuous improvement
+
+## 🎯 QUALITY STANDARDS (BILLION DOLLAR LEVEL)
+- **Pixel-perfect** implementation of all designs
+- **Conversion-optimized** every element and interaction
+- **Mobile-first** responsive design excellence
+- **Fast loading** performance optimization
+- **Accessible** design following WCAG guidelines
+- **A/B testable** architecture for continuous optimization
+
+## 📊 SUCCESS METRICS FOCUS
+- **Strategic consultation bookings** (primary conversion goal)
+- **Territory checker usage** (engagement indicator)
+- **Time on page** and scroll depth (content effectiveness)
+- **Mobile conversion rates** (critical for B2B decision makers)
+
+## 🚀 EXECUTION MINDSET
+Work with the precision of a Swiss watchmaker and the strategic thinking of a conversion optimization genius. Every decision must be backed by either:
+- **User research and feedback**
+- **Conversion optimization best practices**
+- **Industry-specific insights** for high-ticket B2B
+- **Direct comparison** to high-performing landing pages
+
+**This landing page will be the foundation of PWC Agency's market dominance. Excellence is the only acceptable standard.** 

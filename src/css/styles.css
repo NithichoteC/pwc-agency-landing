@@ -1,0 +1,369 @@
+:root {
+    --bg-primary: #121212; /* Exact Figma background */
+    --text-primary: #ffffff;
+    --text-secondary: #b8b8b8; /* Figma: 0.719 */
+    --accent-highlight: #d9d9d9; /* Figma: 0.851 */
+    --strategy-call-text: #1c1c1c; /* Figma: 0.112 */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    font-weight: 300;
+}
+
+/* Main container - exact Figma dimensions */
+.main-container {
+    position: relative;
+    width: 1866px;
+    height: 1876px;
+    background: var(--bg-primary);
+    margin: 0 auto;
+}
+
+/* Logo - using external PNG file that user will provide */
+.logo {
+    position: absolute;
+    left: 147px;
+    top: -20px;
+    width: 185px;
+    height: 208px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Fallback logo if PNG not found */
+.logo-fallback {
+    position: absolute;
+    left: 147px;
+    top: -20px;
+    width: 185px;
+    height: 208px;
+    display: none; /* Hidden by default, shown via JS if image fails */
+}
+
+/* Navigation - improved sizing and positioning */
+.nav-intelligence {
+    position: absolute;
+    left: 460px;
+    top: 0px; /* Align with Strategy Call top */
+    width: 321px;
+    height: 84px; /* Match Strategy Call height */
+    color: var(--text-primary);
+    font-size: 17px;
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    border-radius: 0;
+    background: transparent;
+}
+
+.nav-intelligence:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.nav-partnership {
+    position: absolute;
+    left: 810px;
+    top: 0px; /* Align with Strategy Call top */
+    width: 333px;
+    height: 84px; /* Match Strategy Call height */
+    color: var(--text-primary);
+    font-size: 17px;
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    border-radius: 0;
+    background: transparent;
+}
+
+.nav-partnership:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.nav-territory {
+    position: absolute;
+    left: 1172px;
+    top: 0px; /* Align with Strategy Call top */
+    width: 233px;
+    height: 84px; /* Match Strategy Call height */
+    color: var(--text-primary);
+    font-size: 17px;
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    border-radius: 0;
+    background: transparent;
+}
+
+.nav-territory:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Strategy Call - ENTIRE BLOCK CLICKABLE */
+.strategy-call-block {
+    position: absolute;
+    left: 1400px;
+    top: 0;
+    width: 310px;
+    height: 84px;
+    background: var(--accent-highlight);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--strategy-call-text);
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border-radius: 0;
+}
+
+.strategy-call-block:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Border line - FIXED length, starts after logo */
+.border-line {
+    position: absolute;
+    left: 350px;
+    top: 84px;
+    width: 1516px;
+    height: 1px;
+    background: var(--text-secondary);
+}
+
+/* Main headline - MUCH BIGGER with higher z-index */
+.main-headline {
+    position: absolute;
+    left: 181px;
+    top: 167px;
+    width: 1200px;
+    height: 350px;
+    font-size: 10rem;
+    font-weight: 800;
+    line-height: 0.85;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+    z-index: 20; /* Higher than CTA so "DOMINATING" appears on top */
+}
+
+/* Subheadline - MOVED MUCH FURTHER DOWN to prevent overlap */
+.subheadline {
+    position: absolute;
+    left: 181px;
+    top: 750px; /* Moved much further down - was 680px, now 750px */
+    width: 900px;
+    height: 80px;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    z-index: 10;
+}
+
+/* NEW CTA DESIGN - EXTENDS BEYOND RIGHT EDGE */
+.cta-massive {
+    position: absolute;
+    left: 900px; /* Start overlapping "STRUGGLING" */
+    top: 250px; /* Positioned to overlap with headline */
+    width: 1200px; /* Extends way beyond the container */
+    height: 400px;
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.03) 0%, 
+        rgba(255, 255, 255, 0.08) 50%, 
+        rgba(255, 255, 255, 0.12) 100%);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    backdrop-filter: blur(10px);
+    z-index: 5; /* Below headline so "DOMINATING" appears above it */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.cta-massive::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    z-index: 1;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--text-primary);
+}
+
+.cta-massive-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #ffffff 0%, #d9d9d9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cta-massive-subtitle {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    line-height: 1.4;
+}
+
+.cta-button-primary {
+    padding: 1.2rem 3rem;
+    background: linear-gradient(135deg, var(--accent-highlight) 0%, #ffffff 100%);
+    color: var(--strategy-call-text);
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #ffffff 0%, var(--accent-highlight) 100%);
+}
+
+/* Logo placeholder message */
+.logo-instructions {
+    position: absolute;
+    left: 181px;
+    top: 900px; /* Moved further down since subheading is now at 750px */
+    width: 800px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.5;
+    z-index: 10;
+}
+
+.logo-instructions strong {
+    color: var(--text-primary);
+}
+
+/* Responsive design */
+@media (max-width: 1866px) {
+    .main-container {
+        width: 100%;
+        transform: scale(0.9);
+        transform-origin: top center;
+    }
+}
+
+@media (max-width: 1600px) {
+    .main-container {
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 1400px) {
+    .main-container {
+        transform: scale(0.7);
+    }
+}
+
+@media (max-width: 1200px) {
+    .main-container {
+        transform: scale(0.6);
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        transform: none;
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+    }
+    
+    .logo,
+    .logo-fallback,
+    .nav-intelligence,
+    .nav-partnership, 
+    .nav-territory,
+    .strategy-call-block,
+    .main-headline,
+    .subheadline,
+    .cta-massive,
+    .logo-instructions {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 1rem 0;
+        text-align: center;
+    }
+    
+    .logo {
+        width: 120px;
+        height: 150px;
+        margin: 1rem auto;
+        display: block;
+    }
+    
+    .main-headline {
+        font-size: 3rem;
+        height: auto;
+    }
+    
+    .subheadline {
+        height: auto;
+        font-size: 1.1rem;
+    }
+    
+    .cta-massive {
+        height: 300px;
+        width: 100%;
+    }
+} 

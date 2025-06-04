@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Main Structure</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: #000;
+            color: white;
+        }
+        
+        .failed-attempts-section {
+            min-height: 200vh;
+            background: #0A0A0A;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+        }
+        
+        .next-section {
+            min-height: 100vh;
+            background: #333333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #transition-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            background: #0A0A0A;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- NARRATIVE SECTION (mimicking failed-attempts-section) -->
+    <section class="failed-attempts-section">
+        <div>
+            <h1>Long Dark Section</h1>
+            <p>Scroll down to see the transition...</p>
+            <p>This section is very tall (200vh) to mimic the narrative section</p>
+            <p>The transition should appear after this section ends</p>
+        </div>
+    </section>
+
+    <!-- TRANSITION CONTAINER -->
+    <div id="transition-container">
+        <!-- Transition bars will be created here -->
+    </div>
+
+    <!-- NEXT SECTION -->
+    <section class="next-section" id="next-section">
+        <div>
+            <h1>Next Section</h1>
+            <p>This is the gray section after the transition</p>
+        </div>
+    </section>
+
+    <!-- WORKING STRIPE TRANSITION -->
+    <script>
+        console.log('🚀 STRIPE TRANSITION STARTING...');
+        
+        function initStripeTransition() {
+            const container = document.getElementById('transition-container');
+            const section1 = document.querySelector('.failed-attempts-section');
+            
+            console.log('🔍 Elements check:');
+            console.log('  - Container:', container);
+            console.log('  - Section1:', section1);
+            
+            if (!container || !section1) {
+                console.error('❌ Missing elements for stripe transition!');
+                return;
+            }
+            
+            // Configuration
+            const NUMBER_OF_BARS = 7;
+            const INITIAL_HEIGHT = 750;
+            const EASING = 0.12;
+            
+            // State
+            let bars = [];
+            let currentHeight = INITIAL_HEIGHT;
+            let targetHeight = INITIAL_HEIGHT;
+            
+            // Color interpolation
+            function interpolateColor(color1, color2, factor) {
+                factor = Math.max(0, Math.min(1, factor));
+                const c1 = parseInt(color1.slice(1), 16);
+                const c2 = parseInt(color2.slice(1), 16);
+                const r1 = (c1 >> 16) & 0xff; const g1 = (c1 >> 8) & 0xff; const b1 = c1 & 0xff;
+                const r2 = (c2 >> 16) & 0xff; const g2 = (c2 >> 8) & 0xff; const b2 = c2 & 0xff;
+                const r = Math.round(r1 + (r2 - r1) * factor);
+                const g = Math.round(g1 + (g2 - g1) * factor);
+                const b = Math.round(b1 + (b2 - b1) * factor);
+                return `#${((r << 16) | (g << 8) | b).toString(16).padStart(6, '0')}`;
+            }
+            
+            // Create bars
+            for (let i = 0; i < NUMBER_OF_BARS; i++) {
+                const bar = document.createElement('div');
+                const factor = i / (NUMBER_OF_BARS - 1);
+                bar.style.cssText = `
+                    width: 100%;
+                    height: ${INITIAL_HEIGHT / NUMBER_OF_BARS}px;
+                    background-color: ${interpolateColor('#0A0A0A', '#333333', factor)};
+                    margin: 0;
+                    padding: 0;
+                    display: block;
+                `;
+                container.appendChild(bar);
+                bars.push(bar);
+            }
+            
+            // Set container styles
+            container.style.cssText = `
+                height: ${INITIAL_HEIGHT}px;
+                overflow: hidden;
+                background: #0A0A0A;
+                margin: 0;
+                padding: 0;
+            `;
+            
+            // Calculate target height based on scroll
+            function updateTarget() {
+                const scrollY = window.pageYOffset;
+                const sectionEnd = section1.offsetTop + section1.offsetHeight;
+                const collapseStart = sectionEnd - INITIAL_HEIGHT;
+                
+                console.log(`Scroll: ${scrollY}, Section End: ${sectionEnd}, Collapse Start: ${collapseStart}`);
+                
+                if (scrollY <= collapseStart) {
+                    targetHeight = INITIAL_HEIGHT;
+                } else if (scrollY >= sectionEnd) {
+                    targetHeight = 0;
+                } else {
+                    const progress = (scrollY - collapseStart) / INITIAL_HEIGHT;
+                    targetHeight = INITIAL_HEIGHT * (1 - progress);
+                }
+                
+                console.log(`Target Height: ${targetHeight}`);
+            }
+            
+            // Animation loop
+            function animate() {
+                const diff = targetHeight - currentHeight;
+                if (Math.abs(diff) > 0.1) {
+                    currentHeight += diff * EASING;
+                } else {
+                    currentHeight = targetHeight;
+                }
+                
+                const height = Math.round(currentHeight);
+                const barHeight = height / NUMBER_OF_BARS;
+                
+                container.style.height = `${height}px`;
+                bars.forEach(bar => {
+                    bar.style.height = `${barHeight}px`;
+                    bar.style.display = height <= 0 ? 'none' : 'block';
+                });
+                
+                requestAnimationFrame(animate);
+            }
+            
+            // Start
+            window.addEventListener('scroll', updateTarget, { passive: true });
+            updateTarget();
+            animate();
+            
+            console.log('✅ Stripe transition initialized!');
+        }
+        
+        // Initialize when ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initStripeTransition);
+        } else {
+            initStripeTransition();
+        }
+    </script>
+</body>
+</html> 

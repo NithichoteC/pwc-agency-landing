@@ -1,0 +1,11 @@
+<svg width="185" height="208" viewBox="0 0 185 208" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Back card (slightly offset) -->
+  <rect x="55" y="65" width="105" height="125" rx="16" fill="white" stroke="none"/>
+  
+  <!-- Front card -->
+  <rect x="35" y="35" width="105" height="125" rx="16" fill="white" stroke="none"/>
+  
+  <!-- Inner dark areas for depth -->
+  <rect x="45" y="45" width="85" height="105" rx="12" fill="black"/>
+  <rect x="65" y="75" width="85" height="105" rx="12" fill="black"/>
+</svg> 

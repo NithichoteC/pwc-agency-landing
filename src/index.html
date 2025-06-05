@@ -642,7 +642,7 @@
             min-height: 0;
             z-index: 5;
         }
-        
+
         .bar {
             display: block;
             width: 100%;
@@ -3380,93 +3380,1475 @@
         <!-- Apple‑style Striped Parallax Wipe 2.0 – single implementation -->
         <div id="transition-container"></div>
 
-        <!-- PWC TAKES CONTROL SECTION - CLEAN 2D2D2D BACKGROUND -->
-        <section class="next-section" id="next-section" style="background-color: #2D2D2D !important; position: relative; overflow: hidden;">
+        <!-- PWC TAKES CONTROL SECTION - Premium Redesign -->
+        <section class="pwc-control-section" style="
+            position: relative;
+            width: 100vw;
+            background: linear-gradient(180deg, 
+                #1a1a1a 0%, 
+                #0a0a0a  30%, 
+                #0d0d0d  70%, 
+                #0a0a0a 100%);
+            z-index: 12;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 120px 0;
+        ">
             
-
-            
-            <!-- Main Content Container -->
-            <div style="position: relative; max-width: 1400px; margin: 0 auto; padding: 120px 60px; z-index: 10; min-height: 100vh; display: flex; align-items: center;">
+            <!-- Sophisticated Feature Styling -->
+            <style>
+                .sophisticated-card {
+                    transition: all 0.3s ease;
+                }
                 
-                <!-- Main Layout: LEFT Stats Grid + RIGHT Content -->
-                <div style="width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center;">
+                .sophisticated-card:hover {
+                    transform: translateY(-2px);
+                }
+                
+                @media (max-width: 768px) {
+                    .sophisticated-feature-cards {
+                        grid-template-columns: 1fr !important;
+                        gap: 1px !important;
+                        padding: 0 20px !important;
+                    }
                     
-                    <!-- LEFT SIDE: CLEAN FEATURE LIST (Apple-Style) -->
-                    <div style="display: flex; flex-direction: column; gap: 64px; max-width: 580px;">
-                        
-                        <!-- Feature 1: AI-Powered Ad Engine -->
-                        <div style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 48px;">
-                            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
-                                <div style="width: 48px; height: 48px; background: rgba(59, 130, 246, 0.15); display: flex; align-items: center; justify-content: center;">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2">
-                                        <path d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2Z"/>
-                                    </svg>
-                                </div>
-                                <h3 style="font-size: 1.5rem; font-weight: 600; font-family: 'Manrope', sans-serif; color: #ffffff; margin: 0;">AI-Powered Ad Engine</h3>
-                            </div>
-                            <p style="color: rgba(255, 255, 255, 0.8); font-size: 1.1rem; line-height: 1.6; font-family: 'Space Grotesk', sans-serif; margin: 0;">Our AI system crafts hyper-realistic ads tailored to your market getting you in front of the right homeowners now before anyone else catches on</p>
-                        </div>
-                        
-                        <!-- Feature 2: Deep Lead Profiling -->
-                        <div style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 48px;">
-                            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
-                                <div style="width: 48px; height: 48px; background: rgba(16, 185, 129, 0.15); display: flex; align-items: center; justify-content: center;">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2">
-                                        <path d="M16 21V5A2 2 0 0 0 14 3H10A2 2 0 0 0 8 5V21L12 19L16 21Z"/>
-                                    </svg>
-                                </div>
-                                <h3 style="font-size: 1.5rem; font-weight: 600; font-family: 'Manrope', sans-serif; color: #ffffff; margin: 0;">Deep Lead Profiling</h3>
-                            </div>
-                            <p style="color: rgba(255, 255, 255, 0.8); font-size: 1.1rem; line-height: 1.6; font-family: 'Space Grotesk', sans-serif; margin: 0;">Our AI agent conducts relentless research on every lead capturing budgets pain points motivations and readiness for outreach</p>
-                        </div>
-                        
-                        <!-- Feature 3: Precision Nurture & Conversion -->
-                        <div style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 48px;">
-                            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
-                                <div style="width: 48px; height: 48px; background: rgba(245, 158, 11, 0.15); display: flex; align-items: center; justify-content: center;">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2">
-                                        <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z"/>
-                                    </svg>
-                                </div>
-                                <h3 style="font-size: 1.5rem; font-weight: 600; font-family: 'Manrope', sans-serif; color: #ffffff; margin: 0;">Precision Nurture & Conversion</h3>
-                            </div>
-                            <p style="color: rgba(255, 255, 255, 0.8); font-size: 1.1rem; line-height: 1.6; font-family: 'Space Grotesk', sans-serif; margin: 0;">Using our deep research data our AI agents and senior conversion specialists run SMS email and call sequences to guide each lead on a custom journey until an appointment is booked</p>
-                        </div>
-                        
-                        <!-- Feature 4: Instant Impact Analytics -->
-                        <div>
-                            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
-                                <div style="width: 48px; height: 48px; background: rgba(139, 92, 246, 0.15); display: flex; align-items: center; justify-content: center;">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2">
-                                        <circle cx="12" cy="12" r="3"/>
-                                        <path d="M12 1V3M12 21V23M4.22 4.22L5.64 5.64M18.36 18.36L19.78 19.78M1 12H3M21 12H23M4.22 19.78L5.64 18.36M18.36 5.64L19.78 4.22"/>
-                                    </svg>
-                                </div>
-                                <h3 style="font-size: 1.5rem; font-weight: 600; font-family: 'Manrope', sans-serif; color: #ffffff; margin: 0;">Instant Impact Analytics</h3>
-                            </div>
-                            <p style="color: rgba(255, 255, 255, 0.8); font-size: 1.1rem; line-height: 1.6; font-family: 'Space Grotesk', sans-serif; margin: 0;">See live results 24/7 track ad spend monitor qualified leads and measure ROI in real time with no surprises no hidden fees only clear performance and control</p>
-                        </div>
-                        
-                    </div>
+                    .sophisticated-card {
+                        height: auto !important;
+                        padding: 32px 24px !important;
+                        border-right: none !important;
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+                    }
                     
-                    <!-- RIGHT SIDE: CONTENT BLOCK -->
-                    <div style="max-width: 640px; padding-left: 40px;">
-                        
-                        <!-- Main Headline -->
-                        <h2 style="font-size: 4.5rem; font-weight: 300; font-family: 'Manrope', sans-serif; line-height: 1.1; letter-spacing: -0.02em; color: #ffffff; margin-bottom: 40px;">
-                            We Handle Every Lead.<br>
-                            <span style="font-weight: 700; background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.8) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">You Close Every Deal.</span>
-                        </h2>
-                        
-                        <!-- Subheadline -->
-                        <p style="color: rgba(255, 255, 255, 0.8); font-size: 1.3rem; line-height: 1.6; font-family: 'Space Grotesk', sans-serif; margin-bottom: 0; font-weight: 400; max-width: 580px;">
-                            You close $5K–$30K projects. Our proprietary AI and human specialists run ads vet leads guide outreach and surface insights 24/7.
-                        </p>
-                        
+                    .impact-title-container {
+                        height: 280px !important;
+                        padding: 0 20px !important;
+                    }
+                    
+                    .impact-title h1 {
+                        font-size: 4rem !important;
+                    }
+                    
+                    .impact-title h2 {
+                        font-size: 3rem !important;
+                    }
+                }
+            </style>
 
+            <!-- Main Container -->
+            <div style="
+                width: 100vw;
+                max-width: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            ">
+                
+                <!-- MASSIVE IMPACT TITLE -->
+                <div class="impact-title-container" style="
+                    width: 100vw;
+                    height: 350px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    margin-bottom: 60px;
+                    overflow: hidden;
+                ">
+                    <!-- Background Gradient -->
+                    <div style="
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+                        pointer-events: none;
+                    "></div>
+                    
+                    <!-- Main Impact Title -->
+                    <div class="impact-title" style="
+                        text-align: center;
+                        margin-bottom: 32px;
+                        position: relative;
+                        z-index: 2;
+                    ">
+                        <h1 style="
+                            font-size: 7rem; 
+                            font-weight: 900; 
+                            font-family: 'Manrope', sans-serif; 
+                            line-height: 0.95; 
+                            letter-spacing: -0.04em; 
+                            margin: 0;
+                            background: linear-gradient(135deg, 
+                                #ffffff 0%, 
+                                rgba(255, 255, 255, 0.95) 30%,
+                                rgba(255, 255, 255, 0.8) 70%,
+                                rgba(255, 255, 255, 0.9) 100%); 
+                            -webkit-background-clip: text; 
+                            -webkit-text-fill-color: transparent; 
+                            background-clip: text;
+                            text-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+                        ">Focus on Closing.</h1>
                         
+                        <h2 style="
+                            font-size: 5.5rem; 
+                            font-weight: 300; 
+                            font-family: 'Manrope', sans-serif; 
+                            line-height: 0.95; 
+                            letter-spacing: -0.03em; 
+                            color: rgba(255, 255, 255, 0.85);
+                            margin: 16px 0 0 0;
+                        ">We Handle Everything Else.</h2>
+        </div>
+
+                    <!-- Premium Subtitle -->
+                    <div style="
+                        max-width: 900px;
+                        text-align: center;
+                        position: relative;
+                        z-index: 2;
+                    ">
+                        <p style="
+                            color: rgba(255, 255, 255, 0.75); 
+                            font-size: 1.5rem; 
+                            line-height: 1.5; 
+                            font-family: 'Space Grotesk', sans-serif; 
+                            margin: 0; 
+                            font-weight: 400;
+                            letter-spacing: -0.01em;
+                        ">Complete system operation by specialists while you focus on what generates revenue—closing $15K-$30K deals.</p>
                     </div>
                     
+                    <!-- Subtle accent lines -->
+                    <div style="
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 200px;
+                        height: 1px;
+                        background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
+                    "></div>
+                </div>
+
+
+
+                <!-- AI AGENCY FEATURE GRID -->
+                <div class="ai-feature-grid" style="
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 0;
+                    width: 100%;
+                    margin: 0 auto;
+                    padding: 0;
+                    margin-bottom: -1px;
+                    position: relative;
+                    z-index: 1;
+                    border: 1px solid rgba(255, 255, 255, 0.08);
+                    border-bottom: none;
+                    background: linear-gradient(180deg, 
+                        #121212 0%,
+                        rgba(20, 20, 25, 0.98) 15%,
+                        rgba(28, 28, 35, 0.95) 35%,
+                        rgba(35, 35, 42, 0.92) 60%,
+                        rgba(30, 30, 38, 0.94) 85%,
+                        rgba(25, 25, 32, 0.96) 100%);
+                    backdrop-filter: blur(20px);
+                    box-shadow: 
+                        inset 0 1px 0 rgba(255, 255, 255, 0.08),
+                        0 -10px 40px rgba(255, 255, 255, 0.02);
+                    overflow: hidden;
+                ">
+                    <!-- Animated Background Overlay -->
+                    <div style="
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background: linear-gradient(45deg, 
+                            transparent 0%, 
+                            rgba(255, 255, 255, 0.01) 25%,
+                            transparent 50%,
+                            rgba(255, 255, 255, 0.015) 75%,
+                            transparent 100%);
+                        animation: softShimmer 12s ease-in-out infinite;
+                        pointer-events: none;
+                        z-index: 0;
+                    "></div>
+                
+                <style>
+                    /* Subtle Background Animation */
+                    @keyframes softShimmer {
+                        0%, 100% { 
+                            transform: translateX(-100%) rotate(45deg);
+                            opacity: 0;
+                        }
+                        25% { 
+                            opacity: 1;
+                        }
+                        50% { 
+                            transform: translateX(200%) rotate(45deg);
+                            opacity: 0.8;
+                        }
+                        75% { 
+                            opacity: 0.3;
+                        }
+                    }
+                    
+                    /* Premium Particle Animation */
+                    @keyframes premiumGlow {
+                        0%, 100% { 
+                            opacity: 0.3; 
+                            transform: scale(0.8) translateY(0px);
+                            filter: blur(0px);
+                        }
+                        50% { 
+                            opacity: 0.8; 
+                            transform: scale(1.2) translateY(-2px);
+                            filter: blur(0.5px);
+                        }
+                    }
+                    
+                    .pixel-effect {
+                        position: absolute;
+                        width: 1px;
+                        height: 1px;
+                        background: rgba(255, 255, 255, 0.4);
+                        border-radius: 50%;
+                        opacity: 0;
+                        transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+                        box-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+                    }
+                    
+                    .ai-card:hover .pixel-effect {
+                        opacity: 1;
+                        animation: premiumGlow 4s infinite;
+                    }
+                    
+                    /* Premium Card System */
+                    .ai-card {
+                        position: relative;
+                        overflow: hidden;
+                        transform-style: preserve-3d;
+                        will-change: transform;
+                        transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+                    }
+                    
+                    .ai-card::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
+                        opacity: 0;
+                        transition: opacity 0.6s ease;
+                        z-index: 10;
+                    }
+                    
+                    .ai-card:hover::before {
+                        opacity: 1;
+                    }
+                    
+                    .ai-card:hover {
+                        transform: translateY(-2px);
+                        box-shadow: 
+                            0 20px 40px rgba(0, 0, 0, 0.4),
+                            0 8px 16px rgba(0, 0, 0, 0.2),
+                            inset 0 1px 0 rgba(255, 255, 255, 0.1);
+                    }
+                    
+                    /* Complete Grid Border System */
+                    .ai-card {
+                        position: relative;
+                        border-right: 1px solid rgba(255, 255, 255, 0.08);
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+                    }
+                    
+                    /* Last card (3rd) - no right border */
+                    .ai-card:nth-child(3) {
+                        border-right: none;
+                    }
+                    
+                    /* Ensure all borders stay exactly the same on hover */
+                    .ai-card:hover {
+                        border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+                    }
+                    
+                    /* Last card hover - maintain no right border */
+                    .ai-card:nth-child(3):hover {
+                        border-right: none !important;
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+                    }
+                    
+                    /* Card Content - Premium Expansion */
+                    .card-main-content {
+                        position: relative;
+                        height: 100%;
+                        padding: 40px 40px 40px 40px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        transform: translateZ(0);
+                        transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+                        background: inherit;
+                        z-index: 3;
+                    }
+                    
+
+                    
+                    /* Enhanced Icon Hover Effects - Scale UP and Animate */
+                    .card-icon {
+                        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+                    }
+                    
+                    .ai-card:hover .card-icon {
+                        transform: scale(1.15) translateY(-4px);
+                    }
+                    
+                    .ai-card:hover .card-icon svg {
+                        transform: rotateY(15deg) rotateX(5deg);
+                        filter: drop-shadow(0 8px 16px rgba(255, 255, 255, 0.1));
+                    }
+                    
+                    /* Enhanced Title Hover Effects */
+                    .ai-card:hover h3 {
+                        transform: translateY(-2px);
+                        text-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+                        letter-spacing: -0.01em;
+                    }
+                    
+                    /* Smooth Bottom Slide-Up (No Fade) */
+                    .card-detailed-content {
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        height: 140px; /* Height to cover subtext area */
+                        padding: 24px 40px 40px 40px;
+                        background: linear-gradient(180deg, 
+                            rgba(8, 8, 12, 0.95) 0%,
+                            rgba(12, 12, 16, 0.98) 50%,
+                            rgba(15, 15, 20, 1) 100%);
+                        backdrop-filter: blur(16px);
+                        transform: translateY(100%);
+                        transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                        z-index: 5;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+                        overflow: hidden;
+                        border-radius: 0 0 12px 12px;
+                        pointer-events: none;
+                        opacity: 1; /* Always full opacity - no fade */
+                    }
+                    
+                    .ai-card:hover .card-detailed-content {
+                        transform: translateY(0%);
+                        pointer-events: auto;
+                    }
+                    
+                    /* Hide original subtext on hover */
+                    .ai-card:hover .card-subtext {
+                        opacity: 0;
+                        transition: opacity 0.3s ease-out;
+                    }
+
+                    /* Subtle Main Content Transition on Hover */
+                    .ai-card:hover .card-main-content {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+
+                    /* Subtext Fade on Hover */
+                    .card-subtext {
+                        transition: opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+                    }
+                    
+                    .ai-card:hover .card-subtext {
+                        opacity: 0;
+                        transition-delay: 0s;
+                    }
+
+                    /* Fixed Container - No Size Changes */
+                    .ai-card {
+                        height: 420px !important; /* Always fixed */
+                    }
+
+                    /* Dynamic Icon Sizing */
+                    .ai-card:hover .card-icon svg {
+                        width: 56px;
+                        height: 56px;
+                        transform: scale(0.95);
+                    }
+                    
+                    /* Bottom Expansion Content Styling */
+                    .card-detailed-content h4 {
+                        font-size: 1rem !important;
+                        line-height: 1.3 !important;
+                        margin-bottom: 8px !important;
+                        color: #ffffff;
+                        font-weight: 600;
+                        font-family: 'Inter', sans-serif;
+                    }
+                    
+                    .card-detailed-content p {
+                        font-size: 0.8rem !important;
+                        line-height: 1.4 !important;
+                        margin: 0 !important;
+                        color: rgba(255, 255, 255, 0.85);
+                        font-weight: 400;
+                        font-family: 'Inter', sans-serif;
+                    }
+                    
+                    /* Premium Reduced Motion Support */
+                    @media (prefers-reduced-motion: reduce) {
+                        .ai-card, .card-main-content, .card-detailed-content,
+                        .card-detailed-content h4, .card-detailed-content p,
+                        .graphics-3d-container, .cube-slice, .neural-node, .funnel-layer {
+                            transition: none !important;
+                            animation: none !important;
+                        }
+                    }
+
+                    /* 3D Graphics Enhancement */
+                    .graphics-3d-container {
+                        position: absolute;
+                        top: 50%;
+                        right: -30px;
+                        transform: translateY(-50%);
+                        width: 120px;
+                        height: 120px;
+                        perspective: 1000px;
+                        opacity: 0;
+                        transition: opacity 0.8s ease;
+                        pointer-events: none;
+                        z-index: 1;
+                    }
+
+                    .ai-card:hover .graphics-3d-container {
+                        opacity: 0.7;
+                        transition-delay: 0.3s;
+                    }
+
+                    /* Cube Animation for Smart Targeting */
+                    .cube-3d-animation {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        transform-style: preserve-3d;
+                        animation: cube-float 8s ease-in-out infinite;
+                    }
+
+                    .cube-slice {
+                        position: absolute;
+                        background: linear-gradient(45deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
+                        border: 1px solid rgba(255,255,255,0.25);
+                        border-radius: 2px;
+                        transform-origin: center;
+                    }
+
+                    .cube-slice:nth-child(1) {
+                        width: 35px; height: 10px; top: 15px; left: 15px;
+                        transform: rotateX(15deg) rotateY(45deg);
+                        animation: slice-float-1 6s ease-in-out infinite;
+                    }
+
+                    .cube-slice:nth-child(2) {
+                        width: 40px; height: 12px; top: 35px; left: 12px;
+                        background: linear-gradient(45deg, rgba(255,255,255,0.2), rgba(255,255,255,0.08));
+                        border-color: rgba(255,255,255,0.3);
+                        transform: rotateX(15deg) rotateY(45deg);
+                        animation: slice-float-2 6s ease-in-out infinite 0.8s;
+                    }
+
+                    .cube-slice:nth-child(3) {
+                        width: 30px; height: 14px; top: 60px; left: 20px;
+                        background: linear-gradient(45deg, rgba(255,255,255,0.25), rgba(255,255,255,0.1));
+                        border-color: rgba(255,255,255,0.35);
+                        transform: rotateX(15deg) rotateY(45deg);
+                        animation: slice-float-3 6s ease-in-out infinite 1.6s;
+                    }
+
+                    /* Neural Network for Lead Intelligence */
+                    .neural-network-animation {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        transform-style: preserve-3d;
+                        animation: neural-pulse 5s ease-in-out infinite;
+                    }
+
+                    .neural-node {
+                        position: absolute;
+                        background: rgba(255,255,255,0.4);
+                        border: 1px solid rgba(255,255,255,0.6);
+                        border-radius: 50%;
+                        animation: node-glow 3s ease-in-out infinite;
+                    }
+
+                    .neural-node:nth-child(1) { width: 6px; height: 6px; top: 20px; left: 45%; animation-delay: 0s; }
+                    .neural-node:nth-child(2) { width: 8px; height: 8px; top: 45px; left: 25%; animation-delay: 0.7s; }
+                    .neural-node:nth-child(3) { width: 7px; height: 7px; top: 70px; left: 60%; animation-delay: 1.4s; }
+
+                    .neural-connection {
+                        position: absolute;
+                        width: 1px;
+                        background: linear-gradient(180deg, rgba(255,255,255,0.3), rgba(255,255,255,0.1));
+                        animation: connection-pulse 3s ease-in-out infinite;
+                    }
+
+                    .neural-connection:nth-child(4) { height: 20px; top: 30px; left: 40%; animation-delay: 0.5s; }
+                    .neural-connection:nth-child(5) { height: 18px; top: 55px; left: 35%; animation-delay: 1s; }
+
+                    /* Funnel Flow for Conversion System */
+                    .funnel-flow-animation {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        transform-style: preserve-3d;
+                        animation: funnel-rotation 6s ease-in-out infinite;
+                    }
+
+                    .funnel-layer {
+                        position: absolute;
+                        background: linear-gradient(90deg, rgba(255,255,255,0.2), rgba(255,255,255,0.1));
+                        border: 1px solid rgba(255,255,255,0.3);
+                        border-radius: 2px;
+                        transform: rotateX(60deg) rotateY(15deg);
+                        animation: flow-pulse 3s ease-in-out infinite;
+                    }
+
+                    .funnel-layer:nth-child(1) { width: 50px; height: 6px; top: 25px; left: 10px; animation-delay: 0s; }
+                    .funnel-layer:nth-child(2) { width: 35px; height: 6px; top: 45px; left: 17px; animation-delay: 0.8s; }
+                    .funnel-layer:nth-child(3) { width: 20px; height: 6px; top: 65px; left: 25px; animation-delay: 1.6s; }
+
+                    .flow-arrow {
+                        position: absolute;
+                        width: 1px;
+                        background: linear-gradient(180deg, rgba(255,255,255,0.4), rgba(255,255,255,0.1));
+                        animation: arrow-flow 2s ease-in-out infinite;
+                    }
+
+                    .flow-arrow:nth-child(4) { height: 15px; top: 35px; left: 35%; animation-delay: 0.3s; }
+                    .flow-arrow:nth-child(5) { height: 15px; top: 55px; left: 35%; animation-delay: 0.8s; }
+
+                    /* Animation Keyframes */
+                    @keyframes cube-float {
+                        0%, 100% { transform: rotateX(15deg) rotateY(45deg) translateY(0px); }
+                        50% { transform: rotateX(25deg) rotateY(55deg) translateY(-6px); }
+                    }
+
+                    @keyframes slice-float-1 {
+                        0%, 100% { transform: rotateX(15deg) rotateY(45deg) translateY(0px) translateZ(0px); }
+                        33% { transform: rotateX(20deg) rotateY(50deg) translateY(-2px) translateZ(3px); }
+                        66% { transform: rotateX(10deg) rotateY(40deg) translateY(1px) translateZ(-2px); }
+                    }
+
+                    @keyframes slice-float-2 {
+                        0%, 100% { transform: rotateX(15deg) rotateY(45deg) translateY(0px) translateZ(3px); }
+                        33% { transform: rotateX(25deg) rotateY(55deg) translateY(-1px) translateZ(5px); }
+                        66% { transform: rotateX(5deg) rotateY(35deg) translateY(2px) translateZ(1px); }
+                    }
+
+                    @keyframes slice-float-3 {
+                        0%, 100% { transform: rotateX(15deg) rotateY(45deg) translateY(0px) translateZ(-1px); }
+                        33% { transform: rotateX(30deg) rotateY(60deg) translateY(-3px) translateZ(2px); }
+                        66% { transform: rotateX(0deg) rotateY(30deg) translateY(1px) translateZ(-3px); }
+                    }
+
+                    @keyframes neural-pulse {
+                        0%, 100% { transform: rotateX(10deg) rotateY(20deg) scale(1); }
+                        50% { transform: rotateX(20deg) rotateY(30deg) scale(1.05); }
+                    }
+
+                    @keyframes node-glow {
+                        0%, 100% { opacity: 0.4; transform: scale(1); box-shadow: 0 0 3px rgba(255,255,255,0.2); }
+                        50% { opacity: 0.8; transform: scale(1.2); box-shadow: 0 0 8px rgba(255,255,255,0.4); }
+                    }
+
+                    @keyframes connection-pulse {
+                        0%, 100% { opacity: 0.3; transform: scaleY(1); }
+                        50% { opacity: 0.7; transform: scaleY(1.2); }
+                    }
+
+                    @keyframes funnel-rotation {
+                        0%, 100% { transform: rotateX(60deg) rotateY(15deg) translateY(0px); }
+                        50% { transform: rotateX(70deg) rotateY(25deg) translateY(-4px); }
+                    }
+
+                    @keyframes flow-pulse {
+                        0%, 100% { opacity: 0.2; transform: rotateX(60deg) rotateY(15deg) scaleX(1); }
+                        50% { opacity: 0.6; transform: rotateX(60deg) rotateY(15deg) scaleX(1.1); }
+                    }
+
+                    @keyframes arrow-flow {
+                        0% { opacity: 0; transform: translateY(-5px); }
+                        50% { opacity: 0.7; transform: translateY(0px); }
+                        100% { opacity: 0; transform: translateY(5px); }
+                    }
+
+                    /* SOPHISTICATED ANIMATED BACKGROUNDS */
+                    
+                    /* Sophisticated Minimal Animations */
+                    @keyframes meta-frame-float {
+                        0%, 100% { 
+                            opacity: 0.01; 
+                            transform: translateY(0px); 
+                        }
+                        50% { 
+                            opacity: 0.02; 
+                            transform: translateY(-8px); 
+                        }
+                    }
+                    
+                    @keyframes meta-story-drift {
+                        0%, 100% { 
+                            opacity: 0.01; 
+                            transform: translateX(0px); 
+                        }
+                        50% { 
+                            opacity: 0.015; 
+                            transform: translateX(12px); 
+                        }
+                    }
+
+                    /* Refined Data Animation */
+                    @keyframes binary-stream {
+                        0%, 100% { 
+                            opacity: 0.008; 
+                        }
+                        50% { 
+                            opacity: 0.02; 
+                        }
+                    }
+                    
+                    @keyframes data-node-pulse {
+                        0%, 100% { 
+                            opacity: 0.02; 
+                            transform: scale(0.8); 
+                            filter: blur(0px);
+                        }
+                        50% { 
+                            opacity: 0.06; 
+                            transform: scale(1.2); 
+                            filter: blur(0.5px);
+                        }
+                    }
+
+                    /* Elegant Communication Flow */
+                    @keyframes comm-symbol-drift {
+                        0%, 100% { 
+                            opacity: 0.01; 
+                            transform: translateY(0px); 
+                        }
+                        50% { 
+                            opacity: 0.02; 
+                            transform: translateY(-6px); 
+                        }
+                    }
+                    
+                    @keyframes connection-line {
+                        0% { 
+                            opacity: 0; 
+                            transform: scaleX(0); 
+                        }
+                        30% { 
+                            opacity: 0.03; 
+                            transform: scaleX(0.5); 
+                        }
+                        70% { 
+                            opacity: 0.03; 
+                            transform: scaleX(1); 
+                        }
+                        100% { 
+                            opacity: 0; 
+                            transform: scaleX(1.2); 
+                        }
+                    }
+
+                    /* Subtle Premium Background */
+                    .animated-bg {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        pointer-events: none;
+                        z-index: 1;
+                        opacity: 0;
+                        transition: opacity 1.2s ease-out;
+                        overflow: hidden;
+                    }
+
+                    .ai-card:hover .animated-bg {
+                        opacity: 1;
+                    }
+
+                    /* Minimal Premium Elements */
+                    .meta-frame {
+                        position: absolute;
+                        border: 1px solid rgba(255, 255, 255, 0.02);
+                        border-radius: 4px;
+                        background: rgba(255, 255, 255, 0.005);
+                    }
+
+                    .meta-frame-1 {
+                        width: 140px;
+                        height: 100px;
+                        top: 120px;
+                        right: 80px;
+                        animation: meta-frame-float 12s infinite;
+                        animation-delay: 0s;
+                    }
+
+                    .meta-frame-2 {
+                        width: 90px;
+                        height: 120px;
+                        top: 200px;
+                        right: 180px;
+                        border-radius: 8px;
+                        animation: meta-story-drift 15s infinite;
+                        animation-delay: 5s;
+                    }
+
+                    /* Minimal Data Elements */
+                    .binary-stream {
+                        position: absolute;
+                        font-family: 'Inter', monospace;
+                        font-size: 9px;
+                        color: rgba(255, 255, 255, 0.015);
+                        white-space: nowrap;
+                        letter-spacing: 3px;
+                        font-weight: 300;
+                    }
+
+                    .binary-stream-1 {
+                        left: 120px;
+                        top: 100px;
+                        animation: binary-stream 20s infinite linear;
+                        animation-delay: 0s;
+                    }
+
+                    .binary-stream-2 {
+                        left: 180px;
+                        top: 180px;
+                        animation: binary-stream 25s infinite linear;
+                        animation-delay: 8s;
+                    }
+
+                    .data-node {
+                        position: absolute;
+                        width: 4px;
+                        height: 4px;
+                        background: rgba(255, 255, 255, 0.04);
+                        border-radius: 50%;
+                        animation: data-node-pulse 3s infinite;
+                    }
+
+                    .data-node-1 {
+                        top: 120px;
+                        left: 200px;
+                        animation-delay: 0s;
+                    }
+
+                    .data-node-2 {
+                        top: 200px;
+                        left: 160px;
+                        animation-delay: 1s;
+                    }
+
+                    .data-node-3 {
+                        top: 160px;
+                        left: 240px;
+                        animation-delay: 2s;
+                    }
+
+                    /* Subtle Communication Icons */
+                    .comm-symbol {
+                        position: absolute;
+                        font-size: 16px;
+                        color: rgba(255, 255, 255, 0.015);
+                        filter: blur(0.5px);
+                    }
+
+                    .comm-symbol-1 {
+                        top: 120px;
+                        right: 100px;
+                        animation: comm-symbol-drift 18s infinite;
+                        animation-delay: 0s;
+                    }
+
+                    .comm-symbol-2 {
+                        top: 200px;
+                        right: 160px;
+                        animation: comm-symbol-drift 22s infinite;
+                        animation-delay: 6s;
+                    }
+
+                    .connection-line {
+                        position: absolute;
+                        height: 1px;
+                        background: linear-gradient(90deg, 
+                            transparent 0%, 
+                            rgba(255, 255, 255, 0.02) 20%, 
+                            rgba(255, 255, 255, 0.04) 50%, 
+                            rgba(255, 255, 255, 0.02) 80%, 
+                            transparent 100%);
+                        transform-origin: left center;
+                    }
+
+                    .connection-line-1 {
+                        top: 140px;
+                        left: 60px;
+                        width: 200px;
+                        animation: connection-line 8s infinite;
+                        animation-delay: 2s;
+                    }
+
+                    .connection-line-2 {
+                        top: 220px;
+                        left: 40px;
+                        width: 180px;
+                        animation: connection-line 6s infinite;
+                        animation-delay: 5s;
+                    }
+
+                    .connection-line-3 {
+                        top: 300px;
+                        left: 80px;
+                        width: 160px;
+                        animation: connection-line 7s infinite;
+                        animation-delay: 1s;
+                    }
+                </style>
+                    
+                    <!-- Smart Targeting System -->
+                    <div class="ai-card" style="
+                        background: linear-gradient(135deg, rgba(15, 15, 15, 0.95) 0%, rgba(20, 20, 20, 0.98) 100%);
+                        padding: 0;
+                        text-align: left;
+                        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                        position: relative;
+                        overflow: hidden;
+                        cursor: pointer;
+                        height: 420px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                    " onmouseover="
+                        this.style.background='linear-gradient(135deg, rgba(18, 18, 18, 0.98) 0%, rgba(25, 25, 25, 1) 100%)';
+                    " onmouseout="
+                        this.style.background='linear-gradient(135deg, rgba(15, 15, 15, 0.95) 0%, rgba(20, 20, 20, 0.98) 100%)';
+                    ">
+                        <!-- Pixel Effects -->
+                        <div class="pixel-effect" style="top: 20px; left: 30px; animation-delay: 0s;"></div>
+                        <div class="pixel-effect" style="top: 45px; left: 60px; animation-delay: 0.3s;"></div>
+                        <div class="pixel-effect" style="top: 70px; left: 25px; animation-delay: 0.6s;"></div>
+                        <div class="pixel-effect" style="top: 35px; right: 40px; animation-delay: 0.9s;"></div>
+                        <div class="pixel-effect" style="top: 80px; right: 70px; animation-delay: 1.2s;"></div>
+                        <div class="pixel-effect" style="top: 55px; right: 20px; animation-delay: 1.5s;"></div>
+                        <div class="pixel-effect" style="bottom: 120px; left: 45px; animation-delay: 0.4s;"></div>
+                        <div class="pixel-effect" style="bottom: 140px; right: 35px; animation-delay: 0.8s;"></div>
+                        
+                        <!-- Main Content (Shrinks on hover) -->
+                        <div class="card-main-content">
+                            <!-- Dynamic Icon -->
+                            <div class="card-icon" style="margin-bottom: 28px; transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);">
+                                <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 255, 255, 0.9)" stroke-width="1.5" style="filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3)); transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                </svg>
+                            </div>
+                            
+                            <!-- Subtle Badge - Fixed Position -->
+                            <div style="
+                                position: absolute;
+                                top: 20px;
+                                right: 20px;
+                                padding: 6px 12px;
+                                background: rgba(255, 255, 255, 0.18);
+                                border: 1px solid rgba(255, 255, 255, 0.20);
+                                border-radius: 6px;
+                                font-size: 0.7rem;
+                                color: rgba(255, 255, 255, 0.85);
+                                font-family: 'Space Grotesk', monospace;
+                                font-weight: 600;
+                                letter-spacing: 0.8px;
+                                backdrop-filter: blur(12px);
+                                z-index: 10;
+                            ">TARGETING SYSTEM</div>
+                            
+                            <h3 style="
+                                color: #ffffff;
+                                font-size: 1.8rem;
+                                font-weight: 600;
+                                margin-bottom: 16px;
+                                font-family: 'Manrope', sans-serif;
+                                letter-spacing: -0.02em;
+                                transition: all 0.3s ease;
+                            ">Neural Ad Engine</h3>
+                            
+                            <p class="card-subtext" style="
+                                color: rgba(255, 255, 255, 0.7);
+                                font-size: 0.95rem;
+                                line-height: 1.6;
+                                margin: 0;
+                                font-family: 'Space Grotesk', sans-serif;
+                                font-weight: 400;
+                            " class="card-subtext">Our AI crafts hyper-realistic ads in real time, injecting you into the right homeowner's feed before anyone else catches on.</p>
+                        </div>
+                        
+                        <!-- Subtle Premium Background -->
+                        <div class="animated-bg">
+                            <!-- Minimal Design Elements -->
+                            <div class="meta-frame meta-frame-1"></div>
+                            <div class="meta-frame meta-frame-2"></div>
+                        </div>
+                        
+                        <!-- Detailed Content (Slides up on hover) -->
+                        <div class="card-detailed-content">
+                            <!-- 3D Cube Animation -->
+                            <div class="graphics-3d-container">
+                                <div class="cube-3d-animation">
+                                    <div class="cube-slice"></div>
+                                    <div class="cube-slice"></div>
+                                    <div class="cube-slice"></div>
+                                </div>
+                            </div>
+                            
+                            <h4 style="
+                                color: #ffffff;
+                                font-size: 1.1rem;
+                                font-weight: 600;
+                                margin-bottom: 12px;
+                                font-family: 'Manrope', sans-serif;
+                            ">Real-Time Ad Creation</h4>
+                            <p style="
+                                color: rgba(255, 255, 255, 0.8);
+                                font-size: 0.9rem;
+                                line-height: 1.5;
+                                margin: 0;
+                                font-family: 'Space Grotesk', sans-serif;
+                                font-weight: 400;
+                            ">Dynamic AI generates personalized ad creative based on local market conditions, seasonal demand, and competitor analysis—placing your message in front of ready-to-buy homeowners at the exact moment they're researching solar or roofing solutions.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Intelligence Layer System -->
+                    <div class="ai-card" style="
+                        background: linear-gradient(135deg, rgba(12, 12, 12, 0.92) 0%, rgba(16, 16, 16, 0.96) 100%);
+                        padding: 0;
+                        text-align: left;
+                        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                        position: relative;
+                        overflow: hidden;
+                        cursor: pointer;
+                        height: 420px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                    " onmouseover="
+                        this.style.background='linear-gradient(135deg, rgba(16, 16, 16, 0.98) 0%, rgba(20, 20, 20, 1) 100%)';
+                    " onmouseout="
+                        this.style.background='linear-gradient(135deg, rgba(12, 12, 12, 0.92) 0%, rgba(16, 16, 16, 0.96) 100%)';
+                    ">
+                        <!-- Pixel Effects -->
+                        <div class="pixel-effect" style="top: 25px; left: 35px; animation-delay: 0.2s;"></div>
+                        <div class="pixel-effect" style="top: 50px; left: 65px; animation-delay: 0.5s;"></div>
+                        <div class="pixel-effect" style="top: 75px; left: 30px; animation-delay: 0.8s;"></div>
+                        <div class="pixel-effect" style="top: 40px; right: 45px; animation-delay: 1.1s;"></div>
+                        <div class="pixel-effect" style="top: 85px; right: 75px; animation-delay: 1.4s;"></div>
+                        <div class="pixel-effect" style="top: 60px; right: 25px; animation-delay: 1.7s;"></div>
+                        <div class="pixel-effect" style="bottom: 125px; left: 50px; animation-delay: 0.6s;"></div>
+                        <div class="pixel-effect" style="bottom: 145px; right: 40px; animation-delay: 1.0s;"></div>
+                        
+                        <!-- Main Content (Shrinks on hover) -->
+                        <div class="card-main-content">
+                            <!-- Dynamic Icon -->
+                            <div class="card-icon" style="margin-bottom: 28px; transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);">
+                                <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 255, 255, 0.9)" stroke-width="1.5" style="filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3)); transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);">
+                                    <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                                </svg>
+                            </div>
+                            
+                            <!-- Subtle Badge - Fixed Position -->
+                            <div style="
+                                position: absolute;
+                                top: 20px;
+                                right: 20px;
+                                padding: 6px 12px;
+                                background: rgba(255, 255, 255, 0.18);
+                                border: 1px solid rgba(255, 255, 255, 0.20);
+                                border-radius: 6px;
+                                font-size: 0.7rem;
+                                color: rgba(255, 255, 255, 0.85);
+                                font-family: 'Space Grotesk', monospace;
+                                font-weight: 600;
+                                letter-spacing: 0.8px;
+                                backdrop-filter: blur(12px);
+                                z-index: 10;
+                            ">INTELLIGENCE LAYER</div>
+                            
+                            <h3 style="
+                                color: #ffffff;
+                                font-size: 1.8rem;
+                                font-weight: 600;
+                                margin-bottom: 16px;
+                                font-family: 'Manrope', sans-serif;
+                                letter-spacing: -0.02em;
+                                transition: all 0.3s ease;
+                            ">Intelligence Core</h3>
+                            
+                            <p class="card-subtext" style="
+                                color: rgba(255, 255, 255, 0.7);
+                                font-size: 0.95rem;
+                                line-height: 1.6;
+                                margin: 0;
+                                font-family: 'Space Grotesk', sans-serif;
+                                font-weight: 400;
+                            " class="card-subtext">Advanced qualification filters deliver only decision-ready prospects.</p>
+                        </div>
+                        
+                        <!-- Subtle Premium Background -->
+                        <div class="animated-bg">
+                            <!-- Minimal Data Elements -->
+                            <div class="binary-stream binary-stream-1">data intelligence</div>
+                            <div class="binary-stream binary-stream-2">qualified leads</div>
+                        </div>
+                        
+                        <!-- Detailed Content (Slides up on hover) -->
+                        <div class="card-detailed-content">
+                            <!-- 3D Neural Network Animation -->
+                            <div class="graphics-3d-container">
+                                <div class="neural-network-animation">
+                                    <div class="neural-node"></div>
+                                    <div class="neural-node"></div>
+                                    <div class="neural-node"></div>
+                                    <div class="neural-connection"></div>
+                                    <div class="neural-connection"></div>
+                                </div>
+                            </div>
+                            
+                            <h4 style="
+                                color: #ffffff;
+                                font-size: 1.1rem;
+                                font-weight: 600;
+                                margin-bottom: 12px;
+                                font-family: 'Manrope', sans-serif;
+                            ">Multi-Tier Scoring</h4>
+                            <p style="
+                                color: rgba(255, 255, 255, 0.8);
+                                font-size: 0.9rem;
+                                line-height: 1.5;
+                                margin: 0;
+                                font-family: 'Space Grotesk', sans-serif;
+                                font-weight: 400;
+                            ">AI scoring processes 15+ qualification vectors including financial readiness, timeline urgency, and decision authority to deliver only high-probability homeowners to your pipeline.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Sales Engine System -->
+                    <div class="ai-card" style="
+                        background: linear-gradient(135deg, rgba(10, 10, 10, 0.9) 0%, rgba(13, 13, 13, 0.94) 100%);
+                        padding: 0;
+                        text-align: left;
+                        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                        position: relative;
+                        overflow: hidden;
+                        cursor: pointer;
+                        height: 420px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                    " onmouseover="
+                        this.style.background='linear-gradient(135deg, rgba(14, 14, 14, 0.96) 0%, rgba(18, 18, 18, 1) 100%)';
+                    " onmouseout="
+                        this.style.background='linear-gradient(135deg, rgba(10, 10, 10, 0.9) 0%, rgba(13, 13, 13, 0.94) 100%)';
+                    ">
+                        <!-- Pixel Effects -->
+                        <div class="pixel-effect" style="top: 30px; left: 40px; animation-delay: 0.4s;"></div>
+                        <div class="pixel-effect" style="top: 55px; left: 70px; animation-delay: 0.7s;"></div>
+                        <div class="pixel-effect" style="top: 80px; left: 35px; animation-delay: 1.0s;"></div>
+                        <div class="pixel-effect" style="top: 45px; right: 50px; animation-delay: 1.3s;"></div>
+                        <div class="pixel-effect" style="top: 90px; right: 80px; animation-delay: 1.6s;"></div>
+                        <div class="pixel-effect" style="top: 65px; right: 30px; animation-delay: 1.9s;"></div>
+                        <div class="pixel-effect" style="bottom: 130px; left: 55px; animation-delay: 0.8s;"></div>
+                        <div class="pixel-effect" style="bottom: 150px; right: 45px; animation-delay: 1.2s;"></div>
+                        
+                        <!-- Main Content (Shrinks on hover) -->
+                        <div class="card-main-content">
+                            <!-- Dynamic Icon -->
+                            <div class="card-icon" style="margin-bottom: 28px; transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);">
+                                <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 255, 255, 0.9)" stroke-width="1.5" style="filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3)); transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);">
+                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                                </svg>
+                            </div>
+                            
+                            <!-- Subtle Badge - Fixed Position -->
+                            <div style="
+                                position: absolute;
+                                top: 20px;
+                                right: 20px;
+                                padding: 6px 12px;
+                                background: rgba(255, 255, 255, 0.18);
+                                border: 1px solid rgba(255, 255, 255, 0.20);
+                                border-radius: 6px;
+                                font-size: 0.7rem;
+                                color: rgba(255, 255, 255, 0.85);
+                                font-family: 'Space Grotesk', monospace;
+                                font-weight: 600;
+                                letter-spacing: 0.8px;
+                                backdrop-filter: blur(12px);
+                                z-index: 10;
+                            ">SALES ENGINE</div>
+                            
+                            <h3 style="
+                                color: #ffffff;
+                                font-size: 1.8rem;
+                                font-weight: 600;
+                                margin-bottom: 16px;
+                                font-family: 'Manrope', sans-serif;
+                                letter-spacing: -0.02em;
+                                transition: all 0.3s ease;
+                            ">Conversion Engine</h3>
+                            
+                            <p class="card-subtext" style="
+                                color: rgba(255, 255, 255, 0.7);
+                                font-size: 0.95rem;
+                                line-height: 1.6;
+                                margin: 0;
+                                font-family: 'Space Grotesk', sans-serif;
+                                font-weight: 400;
+                            " class="card-subtext">Automated nurturing maximizes conversions from qualified prospects.</p>
+                        </div>
+                        
+                        <!-- Subtle Premium Background -->
+                        <div class="animated-bg">
+                            <!-- Minimal Communication -->
+                            <div class="comm-symbol comm-symbol-1">◦</div>
+                            <div class="comm-symbol comm-symbol-2">◦</div>
+                        </div>
+                        
+                        <!-- Detailed Content (Slides up on hover) -->
+                        <div class="card-detailed-content">
+                            <!-- 3D Funnel Flow Animation -->
+                            <div class="graphics-3d-container">
+                                <div class="funnel-flow-animation">
+                                    <div class="funnel-layer"></div>
+                                    <div class="funnel-layer"></div>
+                                    <div class="funnel-layer"></div>
+                                    <div class="flow-arrow"></div>
+                                    <div class="flow-arrow"></div>
+                                </div>
+                            </div>
+                            
+                            <h4 style="
+                                color: #ffffff;
+                                font-size: 1.1rem;
+                                font-weight: 600;
+                                margin-bottom: 12px;
+                                font-family: 'Manrope', sans-serif;
+                            ">Smart Conversion</h4>
+                            <p style="
+                                color: rgba(255, 255, 255, 0.8);
+                                font-size: 0.9rem;
+                                line-height: 1.5;
+                                margin: 0;
+                                font-family: 'Space Grotesk', sans-serif;
+                                font-weight: 400;
+                            ">Intelligent nurturing sequences adapt messaging based on engagement patterns, optimal timing algorithms, and behavioral triggers to systematically convert qualified prospects into booked appointments.</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+
+
+        <!-- AI ANALYTICS COMMAND CENTER -->
+        <section style="
+            position: relative;
+            width: 100vw;
+            padding: 0;
+            background: linear-gradient(135deg, rgba(8, 8, 8, 0.98) 0%, rgba(12, 12, 12, 1) 100%);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            z-index: 12;
+            overflow: hidden;
+        ">
+            <!-- AI Grid Background -->
+            <div style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-image: 
+                    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+                background-size: 40px 40px;
+                opacity: 0.3;
+            "></div>
+            
+            <div style="position: relative; z-index: 1; padding: 72px 60px; max-width: 1400px; margin: 0 auto;">
+                <!-- Command Center Header -->
+                <div style="text-align: center; margin-bottom: 56px;">
+                    <div style="
+                        display: inline-block;
+                        padding: 6px 12px;
+                        background: rgba(255, 255, 255, 0.06);
+                        border: 1px solid rgba(255, 255, 255, 0.08);
+                        border-radius: 6px;
+                        font-size: 0.75rem;
+                        color: rgba(255, 255, 255, 0.8);
+                        font-family: 'Space Grotesk', monospace;
+                        font-weight: 600;
+                        margin-bottom: 24px;
+                        letter-spacing: 1px;
+                        text-transform: uppercase;
+                    ">LIVE INTELLIGENCE</div>
+                    
+                    <h2 style="
+                        color: #ffffff;
+                        font-size: 2.8rem;
+                        font-weight: 700;
+                        margin-bottom: 16px;
+                        font-family: 'Manrope', sans-serif;
+                        letter-spacing: -0.02em;
+                    ">Command Center Analytics</h2>
+                    
+                    <p style="
+                        color: rgba(255, 255, 255, 0.7);
+                        font-size: 1.1rem;
+                        line-height: 1.6;
+                        max-width: 720px;
+                        margin: 0 auto;
+                        font-family: 'Space Grotesk', sans-serif;
+                        font-weight: 400;
+                    ">Real-time intelligence feeds provide actionable insights from every customer touchpoint across your entire lead generation ecosystem.</p>
+                </div>
+                
+                <!-- Intelligence Grid -->
+                <div style="
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    gap: 1px;
+                    border: 1px solid rgba(255, 255, 255, 0.08);
+                ">
+                    <!-- Acquisition Cost -->
+                    <div style="
+                        background: linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(15, 15, 15, 0.98) 100%);
+                        padding: 36px 28px;
+                        border-right: 1px solid rgba(255, 255, 255, 0.08);
+                        text-align: left;
+                        transition: all 0.3s ease;
+                        position: relative;
+                        overflow: hidden;
+                    " onmouseover="
+                        this.style.background='linear-gradient(135deg, rgba(15, 15, 15, 0.98) 0%, rgba(18, 18, 18, 1) 100%)';
+                        this.querySelector('.status-indicator').style.opacity='1';
+                    " onmouseout="
+                        this.style.background='linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(15, 15, 15, 0.98) 100%)';
+                        this.querySelector('.status-indicator').style.opacity='0.6';
+                    ">
+                        <div class="status-indicator" style="
+                            position: absolute;
+                            top: 12px;
+                            right: 12px;
+                            width: 8px;
+                            height: 8px;
+                            background: rgba(34, 197, 94, 0.8);
+                            border-radius: 50%;
+                            opacity: 0.6;
+                            transition: opacity 0.3s ease;
+                        "></div>
+                        
+                        <div style="
+                            color: rgba(255, 255, 255, 0.5);
+                            font-size: 0.75rem;
+                            font-family: 'Space Grotesk', monospace;
+                            font-weight: 600;
+                            margin-bottom: 12px;
+                            text-transform: uppercase;
+                            letter-spacing: 1px;
+                        ">ACQUISITION</div>
+                        <div style="
+                            color: #ffffff;
+                            font-size: 2.2rem;
+                            font-weight: 700;
+                            font-family: 'Manrope', sans-serif;
+                            margin-bottom: 4px;
+                        ">$8.40</div>
+                        <div style="
+                            color: rgba(34, 197, 94, 0.8);
+                            font-size: 0.7rem;
+                            font-family: 'Space Grotesk', sans-serif;
+                            font-weight: 500;
+                        ">↓ 22% vs goal</div>
+                    </div>
+                    
+                    <!-- Qualification Rate -->
+                    <div style="
+                        background: linear-gradient(135deg, rgba(8, 8, 8, 0.93) 0%, rgba(12, 12, 12, 0.96) 100%);
+                        padding: 36px 28px;
+                        border-right: 1px solid rgba(255, 255, 255, 0.08);
+                        text-align: left;
+                        transition: all 0.3s ease;
+                        position: relative;
+                        overflow: hidden;
+                    " onmouseover="
+                        this.style.background='linear-gradient(135deg, rgba(12, 12, 12, 0.96) 0%, rgba(16, 16, 16, 0.98) 100%)';
+                        this.querySelector('.status-indicator').style.opacity='1';
+                    " onmouseout="
+                        this.style.background='linear-gradient(135deg, rgba(8, 8, 8, 0.93) 0%, rgba(12, 12, 12, 0.96) 100%)';
+                        this.querySelector('.status-indicator').style.opacity='0.6';
+                    ">
+                        <div class="status-indicator" style="
+                            position: absolute;
+                            top: 12px;
+                            right: 12px;
+                            width: 8px;
+                            height: 8px;
+                            background: rgba(34, 197, 94, 0.8);
+                            border-radius: 50%;
+                            opacity: 0.6;
+                            transition: opacity 0.3s ease;
+                        "></div>
+                        
+                        <div style="
+                            color: rgba(255, 255, 255, 0.5);
+                            font-size: 0.75rem;
+                            font-family: 'Space Grotesk', monospace;
+                            font-weight: 600;
+                            margin-bottom: 12px;
+                            text-transform: uppercase;
+                            letter-spacing: 1px;
+                        ">QUALIFICATION</div>
+                        <div style="
+                            color: #ffffff;
+                            font-size: 2.2rem;
+                            font-weight: 700;
+                            font-family: 'Manrope', sans-serif;
+                            margin-bottom: 4px;
+                        ">84.2%</div>
+                        <div style="
+                            color: rgba(34, 197, 94, 0.8);
+                            font-size: 0.7rem;
+                            font-family: 'Space Grotesk', sans-serif;
+                            font-weight: 500;
+                        ">↑ 12% vs target</div>
+                    </div>
+                    
+                    <!-- Conversion Rate -->
+                    <div style="
+                        background: linear-gradient(135deg, rgba(6, 6, 6, 0.95) 0%, rgba(10, 10, 10, 0.98) 100%);
+                        padding: 36px 28px;
+                        border-right: 1px solid rgba(255, 255, 255, 0.08);
+                        text-align: left;
+                        transition: all 0.3s ease;
+                        position: relative;
+                        overflow: hidden;
+                    " onmouseover="
+                        this.style.background='linear-gradient(135deg, rgba(10, 10, 10, 0.98) 0%, rgba(14, 14, 14, 1) 100%)';
+                        this.querySelector('.status-indicator').style.opacity='1';
+                    " onmouseout="
+                        this.style.background='linear-gradient(135deg, rgba(6, 6, 6, 0.95) 0%, rgba(10, 10, 10, 0.98) 100%)';
+                        this.querySelector('.status-indicator').style.opacity='0.6';
+                    ">
+                        <div class="status-indicator" style="
+                            position: absolute;
+                            top: 12px;
+                            right: 12px;
+                            width: 8px;
+                            height: 8px;
+                            background: rgba(34, 197, 94, 0.8);
+                            border-radius: 50%;
+                            opacity: 0.6;
+                            transition: opacity 0.3s ease;
+                        "></div>
+                        
+                        <div style="
+                            color: rgba(255, 255, 255, 0.5);
+                            font-size: 0.75rem;
+                            font-family: 'Space Grotesk', monospace;
+                            font-weight: 600;
+                            margin-bottom: 12px;
+                            text-transform: uppercase;
+                            letter-spacing: 1px;
+                        ">CONVERSION</div>
+                        <div style="
+                            color: #ffffff;
+                            font-size: 2.2rem;
+                            font-weight: 700;
+                            font-family: 'Manrope', sans-serif;
+                            margin-bottom: 4px;
+                        ">12.8%</div>
+                        <div style="
+                            color: rgba(34, 197, 94, 0.8);
+                            font-size: 0.7rem;
+                            font-family: 'Space Grotesk', sans-serif;
+                            font-weight: 500;
+                        ">↑ 38% vs last month</div>
+                    </div>
+                    
+                    <!-- Revenue Generated -->
+                    <div style="
+                        background: linear-gradient(135deg, rgba(4, 4, 4, 0.95) 0%, rgba(8, 8, 8, 0.98) 100%);
+                        padding: 36px 28px;
+                        text-align: left;
+                        transition: all 0.3s ease;
+                        position: relative;
+                        overflow: hidden;
+                    " onmouseover="
+                        this.style.background='linear-gradient(135deg, rgba(8, 8, 8, 0.98) 0%, rgba(12, 12, 12, 1) 100%)';
+                        this.querySelector('.status-indicator').style.opacity='1';
+                    " onmouseout="
+                        this.style.background='linear-gradient(135deg, rgba(4, 4, 4, 0.95) 0%, rgba(8, 8, 8, 0.98) 100%)';
+                        this.querySelector('.status-indicator').style.opacity='0.6';
+                    ">
+                        <div class="status-indicator" style="
+                            position: absolute;
+                            top: 12px;
+                            right: 12px;
+                            width: 8px;
+                            height: 8px;
+                            background: rgba(34, 197, 94, 0.8);
+                            border-radius: 50%;
+                            opacity: 0.6;
+                            transition: opacity 0.3s ease;
+                        "></div>
+                        
+                        <div style="
+                            color: rgba(255, 255, 255, 0.5);
+                            font-size: 0.75rem;
+                            font-family: 'Space Grotesk', monospace;
+                            font-weight: 600;
+                            margin-bottom: 12px;
+                            text-transform: uppercase;
+                            letter-spacing: 1px;
+                        ">REVENUE MTD</div>
+                        <div style="
+                            color: #ffffff;
+                            font-size: 2.2rem;
+                            font-weight: 700;
+                            font-family: 'Manrope', sans-serif;
+                            margin-bottom: 4px;
+                        ">$84K</div>
+                        <div style="
+                            color: rgba(34, 197, 94, 0.8);
+                            font-size: 0.7rem;
+                            font-family: 'Space Grotesk', sans-serif;
+                            font-weight: 500;
+                        ">↑ 156% vs target</div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -3992,7 +5374,7 @@
                 if (!this.transitionBars) {
                     console.log('🎨 Transition bars not initialized in narrative system');
                 }
-            }
+                }
 
             // 🎨 TRANSITION BARS NOW HANDLED BY APPLE STRIPED TRANSITION CLASS
             // (method removed to prevent conflicts)

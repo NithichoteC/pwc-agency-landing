@@ -1,0 +1,166 @@
+/* ===================================================================
+   PWC AGENCY - GLOBAL STYLES
+   CSS Variables, Resets, Base Fonts
+   ================================================================ */
+
+/* CSS Custom Properties */
+:root {
+    /* Color System */
+    --bg-primary: #121212;
+    --bg-secondary: #0A0A0A;
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.7);
+    --text-accent: rgba(255, 255, 255, 0.85);
+    --text-muted: #888888;
+    --border-primary: rgba(255, 255, 255, 0.08);
+    --border-hover: rgba(255, 255, 255, 0.12);
+    
+    /* Legacy Variables (from inline styles) */
+    --text-secondary-legacy: #b8b8b8;
+    --accent-highlight: #d9d9d9;
+    --strategy-call-text: #1c1c1c;
+    --accent-subtle: #e8e8e8;
+    --accent-warm: #f4f1ea;
+    --card-border: rgba(255, 255, 255, 0.12);
+    --tech-accent: #00f5ff;
+    --grid-accent: rgba(255, 255, 255, 0.04);
+    
+    /* Gradient System */
+    --gradient-primary: linear-gradient(135deg, rgba(15, 15, 15, 0.95) 0%, rgba(20, 20, 20, 0.98) 100%);
+    --gradient-secondary: linear-gradient(180deg, #121212 0%, rgba(25, 25, 32, 0.96) 100%);
+    --gradient-features: linear-gradient(180deg, 
+        #121212 0%,
+        rgba(20, 20, 25, 0.98) 15%,
+        rgba(28, 28, 35, 0.95) 35%,
+        rgba(35, 35, 42, 0.92) 60%,
+        rgba(30, 30, 38, 0.94) 85%,
+        rgba(25, 25, 32, 0.96) 100%);
+    
+    /* Spacing System */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-2xl: 48px;
+    --space-3xl: 64px;
+    --space-4xl: 80px;
+    
+    /* Typography Scale */
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-4xl: 2.25rem;
+    --font-size-5xl: 3rem;
+    --font-size-6xl: 3.75rem;
+    --font-size-7xl: 4.5rem;
+    
+    /* Animation Easing */
+    --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+    --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+    --ease-premium: cubic-bezier(0.23, 1, 0.32, 1);
+    --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.4);
+    --shadow-premium: 0 20px 40px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.2);
+    
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    font-weight: 300;
+    min-height: 100vh;
+}
+
+/* Font Loading */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+/* Selection Styles */
+::selection {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--text-primary);
+}
+
+/* Focus Styles */
+:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.5);
+    outline-offset: 2px;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Main Container */
+.main-container {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    background: transparent;
+    margin: 0;
+    z-index: 10;
+    overflow: visible;
+}
+
+/* Structural Grid (Hidden) */
+.structural-grid {
+    display: none;
+} 

@@ -1,0 +1,346 @@
+/* ===================================================================
+   PWC AGENCY - LAYOUT STYLES
+   Sections, Grids, Containers, Responsive Layouts
+   ================================================================ */
+
+/* Market Data Section */
+.market-data {
+    position: absolute;
+    right: 60px;
+    top: 880px;
+    display: flex;
+    gap: 60px;
+    z-index: 10;
+}
+
+.data-point {
+    text-align: right;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.data-value {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: 0.5px;
+    line-height: 1;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.data-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    opacity: 0.8;
+    line-height: 1;
+}
+
+/* Trust Indicator */
+.trust-indicator {
+    position: absolute;
+    left: 60px;
+    top: 920px;
+    font-size: 0.85rem;
+    font-weight: 400;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+    line-height: 1;
+    margin-bottom: 60px;
+}
+
+/* AI Features Section */
+.ai-features-section {
+    position: relative;
+    width: 100%;
+    margin-top: 60px;
+    background: linear-gradient(180deg, 
+        #121212 0%,
+        rgba(20, 20, 25, 0.98) 15%,
+        rgba(28, 28, 35, 0.95) 35%,
+        rgba(35, 35, 42, 0.92) 60%,
+        rgba(30, 30, 38, 0.94) 85%,
+        rgba(25, 25, 32, 0.96) 100%);
+    border-top: 1px solid var(--border-primary);
+    z-index: 5;
+}
+
+.ai-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    margin: 0;
+    gap: 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* Analytics Section */
+.analytics-section {
+    position: relative;
+    padding: var(--space-4xl) var(--space-3xl);
+    text-align: center;
+    background: var(--bg-secondary);
+    margin-top: var(--space-4xl);
+}
+
+.analytics-section h2 {
+    font-size: var(--font-size-5xl);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--space-lg);
+    font-family: 'Manrope', sans-serif;
+}
+
+.analytics-section p {
+    font-size: var(--font-size-lg);
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Transition Stripes */
+.transition-stripe {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(255, 255, 255, 0.1) 20%, 
+        rgba(255, 255, 255, 0.2) 50%, 
+        rgba(255, 255, 255, 0.1) 80%, 
+        transparent 100%);
+    z-index: 2;
+}
+
+/* Spacing Utilities */
+.section-spacing {
+    margin: var(--space-4xl) 0;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--space-xl);
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-2xl);
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+}
+
+/* Flexbox Utilities */
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.gap-sm {
+    gap: var(--space-sm);
+}
+
+.gap-md {
+    gap: var(--space-md);
+}
+
+.gap-lg {
+    gap: var(--space-lg);
+}
+
+.gap-xl {
+    gap: var(--space-xl);
+}
+
+/* Positioning Utilities */
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.sticky {
+    position: sticky;
+}
+
+/* Z-index Management */
+.z-0 { z-index: 0; }
+.z-10 { z-index: 10; }
+.z-20 { z-index: 20; }
+.z-30 { z-index: 30; }
+.z-40 { z-index: 40; }
+.z-50 { z-index: 50; }
+
+/* Width & Height Utilities */
+.w-full { width: 100%; }
+.h-full { height: 100%; }
+.w-screen { width: 100vw; }
+.h-screen { height: 100vh; }
+
+/* Text Alignment */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+/* Overflow Utilities */
+.overflow-hidden { overflow: hidden; }
+.overflow-visible { overflow: visible; }
+.overflow-auto { overflow: auto; }
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .ai-features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .ai-card:nth-child(3) {
+        grid-column: 1 / -1;
+        max-width: 50%;
+        margin: 0 auto;
+    }
+    
+    .market-data {
+        right: var(--space-lg);
+        gap: var(--space-xl);
+    }
+    
+    .data-value {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .ai-features-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .ai-card:nth-child(3) {
+        grid-column: auto;
+        max-width: 100%;
+        margin: 0;
+    }
+    
+    .market-data {
+        position: static;
+        margin: var(--space-2xl) var(--space-lg) 0;
+        justify-content: space-between;
+        gap: var(--space-md);
+    }
+    
+    .data-point {
+        text-align: center;
+    }
+    
+    .data-value {
+        font-size: 1.2rem;
+    }
+    
+    .data-label {
+        font-size: 0.7rem;
+    }
+    
+    .trust-indicator {
+        position: static;
+        margin: var(--space-lg);
+        text-align: center;
+        font-size: 0.8rem;
+    }
+    
+    .analytics-section {
+        padding: var(--space-2xl) var(--space-lg);
+    }
+    
+    .analytics-section h2 {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .analytics-section p {
+        font-size: var(--font-size-base);
+    }
+    
+    .grid-2 {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
+    .grid-3 {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+    
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 var(--space-md);
+    }
+    
+    .analytics-section {
+        padding: var(--space-xl) var(--space-md);
+    }
+    
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Dark Mode Specific Layout Adjustments */
+@media (prefers-color-scheme: dark) {
+    .analytics-section {
+        background: var(--bg-primary);
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .transition-stripe {
+        background: linear-gradient(90deg, 
+            transparent 0%, 
+            rgba(255, 255, 255, 0.3) 20%, 
+            rgba(255, 255, 255, 0.5) 50%, 
+            rgba(255, 255, 255, 0.3) 80%, 
+            transparent 100%);
+    }
+} 

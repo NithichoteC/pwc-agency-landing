@@ -1,0 +1,126 @@
+/* ========================================
+   TRANSITIONS & ANIMATIONS
+   ======================================== */
+
+/* Transition Container */
+#transition-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #0A0A0A;
+    transform: translateZ(0);
+    will-change: height;
+    min-height: 0;
+    z-index: 5;
+}
+
+.bar {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    backface-visibility: hidden;
+}
+
+/* AI Notification System Animations */
+.ai-notification {
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.06) 0%, 
+        rgba(255, 255, 255, 0.03) 50%, 
+        rgba(255, 255, 255, 0.01) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+    backdrop-filter: blur(20px);
+    position: relative;
+    transform: translate3d(0, 0, 0) scale(0.9);
+    opacity: 0;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.2),
+        0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: 
+        transform 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+        opacity 0.3s cubic-bezier(0.23, 1, 0.32, 1),
+        filter 0.3s ease-out;
+    pointer-events: none;
+    height: auto;
+    overflow: hidden;
+}
+
+.ai-notification.entering {
+    transform: translate3d(0, 40px, 0) scale(0.95);
+    opacity: 0;
+    filter: blur(4px);
+}
+
+.ai-notification.show {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 1;
+    filter: blur(0px);
+}
+
+.ai-notification.removing {
+    transform: translate3d(0, -40px, 0) scale(0.9);
+    opacity: 0;
+    filter: blur(6px);
+    transition: 
+        transform 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53),
+        opacity 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53),
+        filter 0.3s ease-out;
+}
+
+/* AI Notification Content */
+.ai-notification-content {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    pointer-events: none;
+}
+
+.ai-notification-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.15) 0%, 
+        rgba(255, 255, 255, 0.08) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+    flex-shrink: 0;
+}
+
+.ai-notification-text {
+    flex: 1;
+    min-width: 0;
+    pointer-events: none;
+}
+
+.ai-notification-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    letter-spacing: 0.3px;
+    pointer-events: none;
+}
+
+.ai-notification-message {
+    font-size: 0.8rem;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    opacity: 0.8;
+    pointer-events: none;
+} 

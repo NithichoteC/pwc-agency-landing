@@ -310,6 +310,101 @@
         grid-template-columns: repeat(2, 1fr);
         gap: var(--space-sm);
     }
+    
+    /* Hero Section Mobile Responsive */
+    .headline-stop-struggling, .headline-start-dominating {
+        font-size: 4rem;
+        left: 20px;
+        width: calc(100vw - 40px);
+    }
+    
+    .subheadline {
+        left: 20px;
+        width: calc(100vw - 40px);
+        font-size: 1.2rem;
+    }
+    
+    .interactive-hover-button {
+        left: 20px;
+        width: calc(100vw - 40px);
+        max-width: 400px;
+    }
+    
+    .logo {
+        left: 20px;
+        height: 60px;
+    }
+    
+    .nav-container {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .nav-container a {
+        font-size: 12px;
+        width: 100px;
+    }
+    
+    .strategy-call-block {
+        right: 20px;
+    }
+    
+    .lead-notification-card, .card-3d-hover-area {
+        right: 20px;
+        width: 400px;
+        height: 350px;
+    }
+    
+    .main-container {
+        height: auto;
+    }
+    
+    .content-wrapper {
+        padding-top: 160px;
+    }
+}
+
+/* Additional Responsive Design */
+@media (max-width: 1024px) {
+    .challenge-container {
+        padding: 80px 40px;
+    }
+    
+    .challenge-headline {
+        font-size: 3.5rem;
+    }
+    
+    .challenge-content-wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .challenge-content-left,
+    .challenge-content-right {
+        max-width: 100%;
+    }
+    
+    .personal-message {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .challenge-container {
+        padding: 60px 20px;
+    }
+    
+    .challenge-headline {
+        font-size: 2.8rem;
+    }
+    
+    .personal-message {
+        font-size: 1.3rem;
+    }
+    
+    .pain-points-card {
+        padding: 30px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -343,4 +438,25 @@
             rgba(255, 255, 255, 0.3) 80%, 
             transparent 100%);
     }
+}
+
+/* Hero Section Layout */
+.main-container {
+    height: 980px; /* Set specific height to end right before bridge */
+}
+
+.content-wrapper {
+    position: relative;
+    min-height: 100vh;
+    padding-top: 240px; /* Further reduced gap above bridge */
+}
+
+/* Parallax Challenge Section */
+.parallax-challenge-section {
+    position: relative;
+    min-height: 120vh;
+    background: var(--bg-primary);
+    overflow: hidden;
+    z-index: 5;
+    padding: 0;
 } 

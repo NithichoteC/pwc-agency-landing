@@ -1,0 +1,94 @@
+/* ===================================================================
+   PWC AGENCY - TYPOGRAPHY STYLES
+   Headlines, Text, Font Hierarchy
+   ================================================================ */
+
+/* Hero Headlines */
+.headline-stop-struggling {
+    position: absolute;
+    left: 60px;
+    top: 160px;
+    width: calc(65vw - 120px);
+    height: auto;
+    font-size: 9rem;
+    font-weight: 300;
+    font-family: 'Manrope', sans-serif;
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+    z-index: 5;
+    color: var(--text-muted);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+.headline-start-dominating {
+    position: absolute;
+    left: 60px;
+    top: 420px;
+    width: calc(65vw - 120px);
+    height: auto;
+    font-size: 9rem;
+    font-weight: 700;
+    font-family: 'Manrope', sans-serif;
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+    z-index: 25;
+    color: var(--text-primary);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.subheadline {
+    position: absolute;
+    left: 60px;
+    top: 680px;
+    width: calc(60vw - 120px);
+    height: auto;
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--text-secondary-legacy);
+    line-height: 1.6;
+    z-index: 10;
+    margin-bottom: 60px;
+}
+
+/* Responsive Typography */
+@media (max-width: 1200px) {
+    .headline-stop-struggling,
+    .headline-start-dominating {
+        font-size: 7rem;
+        width: calc(70vw - 60px);
+    }
+}
+
+@media (max-width: 768px) {
+    .headline-stop-struggling,
+    .headline-start-dominating {
+        font-size: 4rem;
+        left: var(--space-lg);
+        width: calc(100vw - 48px);
+        top: 120px;
+    }
+    
+    .headline-start-dominating {
+        top: 280px;
+    }
+    
+    .subheadline {
+        left: var(--space-lg);
+        top: 420px;
+        width: calc(100vw - 48px);
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .headline-stop-struggling,
+    .headline-start-dominating {
+        font-size: 3rem;
+        line-height: 1.1;
+    }
+    
+    .subheadline {
+        font-size: 1rem;
+    }
+} 
